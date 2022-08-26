@@ -23,7 +23,7 @@ function Advice() {
           {cards.map((card) => (
             <div className="rounded" key={card.id}>
                 <div className=""><img src={card.src} alt="card" className="rounded "/></div>
-                <div className=""><p className="font-bold text-2xl  py-8 pb-10">{card.title}</p></div>
+                <div className=""><p className="font-bold text-2xl  py-8 pb-10 bg-white">{card.title}</p></div>
             </div>
           ))}
         </div>

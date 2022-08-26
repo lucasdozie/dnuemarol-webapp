@@ -30,7 +30,7 @@ function Similar() {
             {jobs.map((job) => (
               <div className="py-2" key={job.id}>
                 <a href="#" className="text-blue-400">{job.job}</a>
-                <a href="#" className="block">{job.place}</a>
+                <a href="#" className="block text-gray-500">{job.place}</a>
                 <a href="#" className="">{job.type}</a>
               </div>
             ))}

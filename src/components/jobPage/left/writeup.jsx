@@ -1,24 +1,25 @@
 import Button from "../../landingPage/others/btn";
 import CompanyCard from "./companyCard";
 import Perks from "./perks";
+import Search from "./search";
 import SkillRes from "./skillres";
 
 function Writeups() {
   return (
     <>
-      <div className=" w-[650px] text-xl">
+      <div className=" w-[650px] text-lg">
         <div className="">
           <div className="">
-            <p className="">Frontsteps</p>
-            <p className="font-bold text-2xl">Development Manager (Remote)</p>
-            <p className="">2 days ago•Denver, CO / Remote</p>
+            <p className="text-sm text-blue-800 font-bold">Frontsteps</p>
+            <p className="font-bold text-3xl">Development Manager (Remote)</p>
+            <p className="text-sm">2 days ago•Denver, CO / Remote</p>
           </div>
           <CompanyCard />
           <div className="">
-            <p className="font-bold text-xl">
+            <p className="font-bold py-8 px-2 text-lg">
               CO Salary Range: USD 120,000.00 - 140,000.00 per year
             </p>
-            <p className="t">
+            <p className="text-lg">
               Headquartered in Denver, Colorado with additional offices in
               Arizona and California, FRONTSTEPS is a SaaS company with a
               resident engagement platform to empower communities to be safe,
@@ -70,23 +71,26 @@ function Writeups() {
             <SkillRes />
           </div>
           <div className="">
-            <p className="">
+            <p className="py-5">
               FRONTSTEPS is proud to be an equal opportunity employer. All
               qualified applicants receive consideration for employment without
               regard to race, color, religion, sex, sexual orientation, gender
               identity, national origin, age, protected veteran status, or
               disability status.
             </p>
-            <p className="">
-              Client-provided location(s): Denver, CO, USA Job ID:
+            <p className="text-sm">
+              Client-provided location(s): Denver, CO, USA <br/>Job ID:
               Frontsteps-27680072
             </p>
-            <div className="border-b-[1px] p-10">
+            <div className="border-b-[1px] py-10">
               <Button text="APPLY ON COMPANY SITE"  className="px-10 py-3 bg-blue-500 rounded text-white text-base"/>
             </div>
           </div>
-          <div className="pt-10">
+          <div className="pt-5">
             <Perks />
+          </div>
+          <div>
+            <Search/>
           </div>
         </div>
       </div>

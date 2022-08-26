@@ -4,13 +4,13 @@ import work from "./assets/briefcase.svg";
 function CompanyCard() {
   return (
     <>
-      <div className="flex flex-row-reverse">
+      <div className="flex flex-row-reverse shadow-xl rounded p-4">
         <div className="" >
-          <img src={comimg} alt="img" className="w-96 h-48" />
+          <img src={comimg} alt="img" className="w-[650px] h-48 pl-3"  />
         </div>
-        <div className="">
-          <div className="">
-            <p>ABOUT US</p>
+        <div className="pl-3">
+          <div className="pt-5 text-base">
+            <p className="font-bold text-gray-500">ABOUT US</p>
             <p>
               FRONTSTEPS is an all-in-one community association management
               software for every type of community.
@@ -18,7 +18,7 @@ function CompanyCard() {
           </div>
           <div className="">
             <div className="flex">
-            <div className="pr-3">
+            <div className="pr-3 pt-1">
               <svg width="20px" height="20px" viewBox="0 0 20 20">
                 <g
                   stroke="none"
@@ -56,10 +56,10 @@ function CompanyCard() {
                 </g>
               </svg>
               </div>
-              <p>Size: 51 - 200 employees</p>
+              <p className="text-base">Size: 51 - 200 employees</p>
             </div>
             <div className="flex">
-              <div className="pr-3"><svg width="20px" height="20px" viewBox="0 0 20 20">
+              <div className="pr-3 pt-1"><svg width="20px" height="20px" viewBox="0 0 20 20">
                 <g
                   stroke="none"
                   stroke-width="1"
@@ -89,11 +89,11 @@ function CompanyCard() {
                   </g>
                 </g>
               </svg></div>
-              <p>Industry: Real Estate & Construction, Technology</p>
+              <p className="text-base">Industry: Real Estate & Construction, Technology</p>
             </div>
           </div>
           <div className="">
-            <a href="#">VISIT COMPANY PROFILE > </a>
+            <a href="#" className="text-base text-blue-700">VISIT COMPANY PROFILE > </a>
           </div>
         </div>
       </div>

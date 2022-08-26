@@ -1,6 +1,6 @@
 import logo from "../images/muselogo.svg";
-import search from "../images/search.svg";
 import SearchIcon from "../others/searchicon";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <>
@@ -17,9 +17,9 @@ function Header() {
           </div>
         </div>
         <div>
-          <a href="./jobPage/left/writeup" className="p-3">
+        <Link to="/Jobspage"className="p-3">
             JOBS
-          </a>
+          </Link>
           <a href="#" className="p-3">
             COMPANY
           </a>

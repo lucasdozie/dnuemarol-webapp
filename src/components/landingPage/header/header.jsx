@@ -1,13 +1,14 @@
-import logo from "../images/muselogo.svg";
-import SearchIcon from "../others/searchicon";
+import logo from "../images/dneulogo.svg";
+
 import { Link } from "react-router-dom";
+import SearchIcon from "../../others/searchicon";
 function Header() {
   return (
     <>
-      <div className="flex justify-between bg-black px-5 py-6 text-white">
+      <div className="flex justify-between bg-black px-5 py-6 text-white sticky top-0 z-50">
         <div className="flex justify-evenly">
           <div className="w-28 h-1 ">
-            <img src={logo} alt="logo" className="" />
+            <Link to="/"><img src={logo} alt="logo" className="" /></Link>
           </div>
           <div className="flex justify-evenly pl-4">
             <input type="search" placeholder="Search Jobs" size="30" />

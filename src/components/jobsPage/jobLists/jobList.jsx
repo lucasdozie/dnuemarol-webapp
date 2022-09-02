@@ -1,4 +1,4 @@
-import Button from "../../landingPage/others/btn";
+import Button from "../../others/btn";
 import { Link } from "react-router-dom";
 
 function JobList() {

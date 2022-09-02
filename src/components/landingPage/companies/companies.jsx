@@ -4,7 +4,7 @@ import audible from "../images/audible.png"
 import allbirs from "../images/allbirslogo.png"
 import robinhood from "../images/robinhood.png"
 import goldman from "../images/goldman.png"
-import Button from "../others/btn"
+import Button from "../../others/btn"
 
 function Companies() {
     const logos=[{src:tiktok,id:1},{src:allbirs,id:2},{src:nike,id:3},{src:audible,id:5},{src:goldman,id:6},{src:robinhood,id:7}]

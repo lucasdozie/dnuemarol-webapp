@@ -20,6 +20,9 @@ module.exports = {
         'blue-pattern': "url('components/landingPage/images/bg.png')",
         'blues-pattern': "url('components/landingPage/images/bg2.png')",
       },
+      colors:{
+        grayLight:"#3d3d3d"
+      },
       fontFamily: {
         sans: ['Barlow', ...defaultTheme.fontFamily.sans],
      },

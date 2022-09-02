@@ -1,4 +1,4 @@
-import Button from "../../landingPage/others/btn";
+import Button from "../../others/btn";
 import CompanyCard from "./companyCard";
 import Perks from "./perks";
 import Search from "./search";
@@ -41,7 +41,7 @@ function Writeups() {
             </p>
           </div>
           <div className="">
-            <p className="pt-5 font-bold">POSITION OVERVIEW</p>
+            <p className="pt-5 font-bold pb-3">POSITION OVERVIEW</p>
             <p className="">
               Our engineering team prioritizes creating excellent systems via
               rapid iterations, collaboration, and peer review. We are looking

@@ -3,7 +3,7 @@ function SkillRes() {
     <>
       <div>
         <div>
-          <p className="font-bold tet-xl py-2" >JOB RESPONSIBILITIES</p>
+          <p className="font-bold tet-xl pt-10 pb-3" >JOB RESPONSIBILITIES</p>
           <ul className="list-disc px-8">
             <li>Overall responsibility for the software delivery process</li>
             <li>
@@ -48,7 +48,7 @@ function SkillRes() {
           </ul>
         </div>
         <div>
-          <p className="font-bold tet-xl py-2">SKILLS & QUALIFICATIONS</p>
+          <p className="font-bold tet-xl pt-10 pb-3">SKILLS & QUALIFICATIONS</p>
           <p className="font-bold">
             If you're on the fence about whether you meet all of the
             requirements for this role, please apply!
@@ -102,7 +102,7 @@ function SkillRes() {
             $140,000. Occasional meetings may be required in Denver
             headquarters.
           </p>
-          <p className="font-bold pb-3">Benefits include the following:</p>
+          <p className="font-bold pt-10 pb-3">Benefits include the following:</p>
           <ul className="list-disc px-8">
             
             <li>Medical, Dental, and Vision</li>

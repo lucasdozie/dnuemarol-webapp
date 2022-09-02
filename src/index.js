@@ -12,6 +12,8 @@ import Advice from './components/landingPage/advice/advice';
 import Jobspage from './components/jobsPage/jobspage';
 import Jobpage from './components/jobPage/jobpage';
 import Header from './components/landingPage/header/header';
+import Footer from './components/landingPage/footer/footer';
+import JobList from './components/jobsPage/jobLists/jobList';
 
 
 
@@ -30,6 +32,7 @@ root.render(
       <Route path="Jobspage" element={<Jobspage/>}/>
       <Route path="Jobpage" element={<Jobpage/>}/>
     </Routes>
+    <Footer/>
     </BrowserRouter>
   </React.StrictMode>
 );

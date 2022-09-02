@@ -1,11 +1,13 @@
 const Button = (props) => {
-  const handleClick = (e) => {};
+  const handleClick = (e) => {
+    console.log(props.data)
+  };
 
   // const myStyle=
 
   return (
     <>
-      <button onClick={(e) => handleClick} className={props.className}>
+      <button onClick={handleClick} className={props.className}>
         {props.text}
       </button>
     </>

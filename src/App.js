@@ -10,7 +10,7 @@ import Top from './components/landingPage/top/top';
 
 function App() {
   return (
-    <div className="bg-general-pattern font-sans text-grayLight">
+    <div className="bg-general-pattern font-sans  text-blackTint">
       <Top/>
       <Middle/>
       <Companies/>

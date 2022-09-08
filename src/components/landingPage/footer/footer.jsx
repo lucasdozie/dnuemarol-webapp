@@ -1,4 +1,9 @@
-import logo from "../images/muselogo.svg"
+import fb from "../images/footerIcons/sc-facebook-svgrepo-com.svg"
+import pin  from "../images/footerIcons/pinterest-alt-svgrepo-com.svg"
+import linkedin from "../images/footerIcons/linkedin-svgrepo-com (1).svg"
+import ig from "../images/footerIcons/instagram-svgrepo-com (1).svg"
+import twitter from "../images/footerIcons/twitter-svgrepo-com.svg"
+import logo from "../images/dneulogo.svg"
 function Footer(){
     return(
         <>
@@ -47,17 +52,12 @@ function Footer(){
                 </div>
                 <div className="px-3">
                     <p className="py-3 text-blue-300">JOIN THE CONVERSATION</p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul className="flex">
+                        <li className="bg-blueTint rounded-full m-1 w-8 h-8"><a href=""><img src={fb} alt="icon"/></a></li>
+                        <li className="bg-blueTint rounded-full m-1 w-8 h-8"><a href=""><img src={linkedin} alt="icon"/></a></li>
+                        <li className="bg-blueTint rounded-full m-1 w-8 pt-1 pl-1 h-8"><a href=""><img src={twitter} alt="icon"/></a> </li>
+                        <li className="bg-blueTint rounded-full m-1 w-8 pt-1 pl-1 h-8"><a href=""><img src={pin} alt="icon"/></a></li>
+                        <li className="bg-blueTint rounded-full m-1 w-8 h-8"><a href=""><img className="p-1" src={ig} alt="icon"/></a></li>
                     </ul>
                 </div>
             </div>

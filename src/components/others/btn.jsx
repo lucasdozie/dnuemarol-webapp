@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 const Button = (props) => {
   const handleClick = (e) => {
-    console.log(props.data)
+    console.log(props.data);
   };
 
   // const myStyle=
@@ -8,7 +9,9 @@ const Button = (props) => {
   return (
     <>
       <button onClick={handleClick} className={props.className}>
-        {props.text}
+        <Link to={props.link}>
+          <p>{props.text}</p>
+        </Link>
       </button>
     </>
   );

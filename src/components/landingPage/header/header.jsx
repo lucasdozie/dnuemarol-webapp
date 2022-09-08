@@ -7,7 +7,7 @@ function Header() {
     <>
       <div className="flex justify-between bg-black px-5 py-6 text-white sticky top-0 z-50">
         <div className="flex justify-evenly">
-          <div className="w-28 h-1 ">
+          <div className="w-28 h-1  pt-2">
             <Link to="/"><img src={logo} alt="logo" className="" /></Link>
           </div>
           <div className="flex justify-evenly pl-4">
@@ -33,9 +33,9 @@ function Header() {
           <a href="#" className="p-3 border-solid border-2 rounded">
             EMPLOYERS
           </a>
-          <a href="#" className="p-3">
+          <Link to="/SignUp" className="p-3">
             SIGN IN
-          </a>
+          </Link>
         </div>
       </div>
     </>

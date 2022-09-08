@@ -1,4 +1,4 @@
-import Button from "../../others/btn";
+import Button from "../../../others/btn";
 import CompanyCard from "./companyCard";
 import Perks from "./perks";
 import Search from "./search";

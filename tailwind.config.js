@@ -21,7 +21,9 @@ module.exports = {
         'blues-pattern': "url('components/landingPage/images/bg2.png')",
       },
       colors:{
-        grayLight:"#3d3d3d"
+        grayLight:"#3d3d3d",
+        blueTint:"#53B6D0",
+        blackTint:"#5C5552",
       },
       fontFamily: {
         sans: ['Barlow', ...defaultTheme.fontFamily.sans],

@@ -1,4 +1,4 @@
-import Button from "../../others/btn";
+import Button from "../../../others/btn";
 
 
 function TopList(){

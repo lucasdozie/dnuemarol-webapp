@@ -9,11 +9,13 @@ import Coaching from './components/landingPage/coaching/coaching';
 import Companies from './components/landingPage/companies/companies';
 import Middle from './components/landingPage/middle/middle';
 import Advice from './components/landingPage/advice/advice';
-import Jobspage from './components/jobsPage/jobspage';
-import Jobpage from './components/jobPage/jobpage';
+import Jobspage from './components/job/jobsPage/jobspage';
+import Jobpage from './components/job/jobPage/jobpage';
 import Header from './components/landingPage/header/header';
 import Footer from './components/landingPage/footer/footer';
-import JobList from './components/jobsPage/jobLists/jobList';
+import JobList from './components/job/jobsPage/jobLists/jobList';
+import SignUp from './components/form/signup';
+import SignIn from './components/form/signin';
 
 
 
@@ -31,6 +33,8 @@ root.render(
       <Route path="Coaching" element={<Coaching />} />
       <Route path="Jobspage" element={<Jobspage/>}/>
       <Route path="Jobpage" element={<Jobpage/>}/>
+      <Route path="SignUp" element={<SignUp/>}/>
+      <Route path="SignIn" element={<SignIn/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>

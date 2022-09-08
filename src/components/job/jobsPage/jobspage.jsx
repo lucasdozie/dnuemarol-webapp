@@ -1,5 +1,4 @@
 import Filters from "./filters/filters";
-import Norm from "./form/form";
 import JobList from "./jobLists/jobList";
 import TopList from "./searchTabs/topJob";
 
@@ -14,7 +13,6 @@ function Jobspage(){
                 <Filters/>
             </div>
             <div className=""><JobList/></div>
-            {/* <Norm/> */}
             
         </div>
         </>

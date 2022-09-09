@@ -21,6 +21,7 @@ function Coaching() {
           <Button
             text="EXPLORE ALL ADVICE"
             className="px-10 py-3 bg-blue-500 rounded text-white text-base"
+            link="./Coaching"
           />
         </div>
       </div>

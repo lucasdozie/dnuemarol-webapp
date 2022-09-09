@@ -9,13 +9,19 @@ import Coaching from './components/landingPage/coaching/coaching';
 import Companies from './components/landingPage/companies/companies';
 import Middle from './components/landingPage/middle/middle';
 import Advice from './components/landingPage/advice/advice';
-import Jobspage from './components/job/jobsPage/jobspage';
-import Jobpage from './components/job/jobPage/jobpage';
+import AllJobs from './components/job/jobsPage/alljobs';
 import Header from './components/landingPage/header/header';
 import Footer from './components/landingPage/footer/footer';
 import JobList from './components/job/jobsPage/jobLists/jobList';
 import SignUp from './components/form/signup';
 import SignIn from './components/form/signin';
+import ApplyForm from './components/job/jobPage/apply/apply';
+import JobPage from './components/job/jobPage/jobpage';
+import ResForm from './components/job/jobPage/apply/applyform/resume';
+import BioForm from './components/job/jobPage/apply/applyform/bioForm';
+import Employer from './components/others/employer';
+import LastSignup from './components/others/lastSignup';
+
 
 
 
@@ -31,10 +37,16 @@ root.render(
       <Route path="Companies" element={<Companies />} />
       <Route path="Advice" element={<Advice />} />
       <Route path="Coaching" element={<Coaching />} />
-      <Route path="Jobspage" element={<Jobspage/>}/>
-      <Route path="Jobpage" element={<Jobpage/>}/>
+      <Route path="AllJobs" element={<AllJobs/>}/>
+      <Route path="JobPage" element={<JobPage/>}/>
+      <Route path="JobList" element={<JobList/>}/>
       <Route path="SignUp" element={<SignUp/>}/>
       <Route path="SignIn" element={<SignIn/>}/>
+      <Route path="Apply" element={<ApplyForm/>}/>
+      <Route path="ResForm" element={<ResForm/>}/>
+      <Route path="BioForm" element={<BioForm/>}/>
+      <Route path="Employer" element={<Employer/>}/>
+      <Route path="LastSignup" element={<LastSignup/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>

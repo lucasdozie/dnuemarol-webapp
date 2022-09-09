@@ -83,7 +83,7 @@ function Writeups() {
               Frontsteps-27680072
             </p>
             <div className="border-b-[1px] py-10">
-              <Button text="APPLY ON COMPANY SITE"  className="px-10 py-3 bg-blue-500 rounded text-white text-base"/>
+              <Button text="APPLY"  className="px-10 py-3 bg-blue-500 rounded font-extrabold text-white text-base" link="/Apply"/>
             </div>
           </div>
           <div className="pt-5">

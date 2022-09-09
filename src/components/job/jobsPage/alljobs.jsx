@@ -2,7 +2,7 @@ import Filters from "./filters/filters";
 import JobList from "./jobLists/jobList";
 import TopList from "./searchTabs/topJob";
 
-function Jobspage(){
+function AllJobs(){
     return(
         <>
         <div className="text-center mx-80 mb-40">
@@ -19,4 +19,4 @@ function Jobspage(){
     );
 }
 
-export default Jobspage;
+export default AllJobs;

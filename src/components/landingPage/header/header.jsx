@@ -18,7 +18,7 @@ function Header() {
           </div>
         </div>
         <div>
-        <Link to="/Jobspage"className="p-3">
+        <Link to="/AllJobs"className="p-3">
             JOBS
           </Link>
           <a href="#" className="p-3">

@@ -1,5 +1,4 @@
 import Button from "../../../others/btn";
-import { Link } from "react-router-dom";
 
 function JobList() {
   return (
@@ -15,20 +14,20 @@ function JobList() {
             <p>Posted on Aug 19</p>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex py-3">
           <div>
             <Button
-              text="APPLY ON COMPANY SITE"
-              className="p-2 bg-gray-300 text-center"
+              text="APPLY"
+              className="p-2 bg-gray-300 font-bold text-center"
+              link="/Apply"
             />
           </div>
           <div>
-          <Link to="/jobpage">
             <Button
               text="VIEW JOB"
               className="py-3 px-5 rounded border-blue-700 text-blue-500"
+              link="/JobPage"
             />
-            </Link>
           </div>
         </div>
       </div>

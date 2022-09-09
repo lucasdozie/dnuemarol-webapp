@@ -15,7 +15,8 @@ function App() {
       <Middle/>
       <Companies/>
       <Advice/>
-      <Coaching/> 
+      <Coaching/>  
+      
     </div>
   );
 }

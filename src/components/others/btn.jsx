@@ -4,8 +4,6 @@ const Button = (props) => {
     console.log(props.data);
   };
 
-  // const myStyle=
-
   return (
     <>
       <button onClick={handleClick} className={props.className}>

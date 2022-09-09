@@ -12,13 +12,13 @@ function SignUp() {
               text="Sign In"
               title="One of us?"
               body="If you already has an account, just sign in. We've missed you!"
-              link="./SignIn"
+              link="/signin"
             />
           </div>
           <div>
             <div className="py-10">
               <p className="font-extrabold text-3xl"> Sign Up</p>
-              <p className="font-semibold text-xl">Have an account with us</p>
+              <p className="font-semibold text-xl">Its free and only takes a minute</p>
             </div>
 
             <div>
@@ -39,7 +39,7 @@ function SignUp() {
             <div className="text-center mt-6 md:mt-12">
               <Button
                 text="Sign Up"
-                link="./LastSignup"
+                link="/lastsignup"
                 className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300"
               />
             </div>

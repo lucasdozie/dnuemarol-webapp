@@ -13,12 +13,12 @@ function LastSignup(){
                 <div className="px-3">
                     <Button text="Job Seeker"
                   className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded-full transition-colors duration-300"
-                  link="./AllJobs"/>
+                  link="/alljobs"/>
                 </div>
                 <div className="px-3">
                     <Button text="Employer"
                   className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded-full transition-colors duration-300"
-                  link="./Employer"/>
+                  link="/employer"/>
                 </div>
             </div>
         </div>

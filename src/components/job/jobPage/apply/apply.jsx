@@ -29,7 +29,7 @@ function ApplyForm() {
             <Button
               text="Next"
               className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded-full transition-colors duration-300"
-              link="./ResForm"
+              link="/resForm"
             />
           </div>
         </div>

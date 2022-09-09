@@ -22,7 +22,7 @@ function Advice() {
         <div className="flex justify-center px-5 py-5 gap-5 ">
           {cards.map((card) => (
             <div className="rounded" key={card.id}>
-                <div className=""><img src={card.src} alt="card" className="rounded "/></div>
+                <div className="transform transition duration-500 hover:scale-110"><img src={card.src} alt="card" className="rounded "/></div>
                 <div className=""><p className="font-bold text-2xl  py-8 pb-10 bg-white">{card.title}</p></div>
             </div>
           ))}

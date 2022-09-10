@@ -27,7 +27,7 @@ function Info() {
               <FaRegUser />
             </div>
             <div className="flex-1">
-              <input className="leading-[45px] placeholder:text-lg text-center font-semibold w-[400px] hover:border-blue-300" type="text" placeholder="Fullname" value={formData.name} name='name' size="30" onChange={handleChange} />
+              <input className="leading-[45px] bg-transparent outline-none border-hidden placeholder:text-lg font-semibold w-[400px] hover:border-blue-300" type="text" placeholder="Fullname" value={formData.name} name='name' size="30" onChange={handleChange} />
 
             </div>
           </div>
@@ -37,7 +37,7 @@ function Info() {
               <AiOutlineMail />
             </div>
             <div className="flex-1">
-              <input className="leading-[45px] placeholder:text-lg text-center font-semibold w-[400px] hover:border-blue-300" type="text" placeholder="Email Address" value={formData.email} name='email' size="30" onChange={handleChange} />
+              <input className="leading-[45px] bg-transparent outline-none border-hidden placeholder:text-lg font-semibold w-[400px] hover:border-blue-300" type="text" placeholder="Email Address" value={formData.email} name='email' size="30" onChange={handleChange} />
 
             </div>
           </div>
@@ -47,7 +47,7 @@ function Info() {
               <FaLock />
             </div>
             <div className="flex-1">
-              <input className="leading-[45px] placeholder:text-lg text-center font-semibold w-[400px] hover:border-blue-300" type="password" placeholder="Password" value={formData.password} name='password' size="30" onChange={handleChange} />
+              <input className="leading-[45px] bg-transparent outline-none border-hidden placeholder:text-lg font-semibold w-[400px] hover:border-blue-300" type="password" placeholder="Password" value={formData.password} name='password' size="30" onChange={handleChange} />
 
             </div>
           </div>

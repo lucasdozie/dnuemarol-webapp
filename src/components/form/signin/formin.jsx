@@ -16,13 +16,13 @@ function LogInfo() {
   return (
     <>
       <div div className=" mt-6 md:mt-12">
-        <div className="border-2 border-solid rounded flex items-center mb-4">
+        <div className="border-2 border-solid rounded flex  mb-4">
           <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
             <AiOutlineMail />
           </div>
           <div className="flex-1">
             <input
-              className="rounded-full border-blue-300 border-2 leading-[45px] placeholder:text-lg text-center font-semibold"
+              className="rounded-full bg-transparent outline-none border-hidden border-blue-300 border-2 leading-[45px] placeholder:text-lg  font-semibold"
               type="text"
               placeholder="Email Address"
               value={formData.email}
@@ -39,7 +39,7 @@ function LogInfo() {
           </div>
           <div className="flex-1">
             <input
-              className="rounded-full border-blue-300 border-2 leading-[45px] placeholder:text-lg text-center font-semibold"
+              className="rounded-full bg-transparent outline-none border-hidden border-blue-300 border-2 leading-[45px] placeholder:text-lg  font-semibold"
               type="password"
               placeholder="Password"
               value={formData.password}

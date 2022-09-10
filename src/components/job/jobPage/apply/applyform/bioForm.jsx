@@ -34,7 +34,7 @@ function BioForm() {
               </div>
               <div className="">
                 <input
-                  className="bg-transparent	w-[564px] leading-[45px]"
+                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                   autofocus
                   type="text"
                   name="name"
@@ -56,7 +56,7 @@ function BioForm() {
               </div>
               <div className="">
                 <input
-                  className="bg-transparent	w-[564px] leading-[45px]"
+                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                   type="email"
                   name="email"
                   required
@@ -78,7 +78,7 @@ function BioForm() {
               </div>
               <div>
                 <input
-                  className="bg-transparent	w-[564px] leading-[45px]"
+                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                   name="address"
                   type="text"
                   placeholder="Address"
@@ -96,7 +96,7 @@ function BioForm() {
               <div className="px-2"> <FaPhoneAlt/></div>
               <div className="">
                 <input
-                  className="bg-transparent	w-[564px] leading-[45px]"
+                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                   name="phone"
                   type="text"
                   value={formData.phone}
@@ -112,7 +112,7 @@ function BioForm() {
             </div>
             <div className="">
               <input
-                className="bg-transparent	w-[564px] leading-[45px]"
+                className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                 type="date"
                 name="dob"
                 max="125"
@@ -135,7 +135,7 @@ function BioForm() {
                       name="nat"
                       value="1"
                       type="radio"
-                      class="userRatings"
+                      className="p-2"
                       onChange={handleChange}
                     />
                   </label>
@@ -147,7 +147,7 @@ function BioForm() {
                       name="nat"
                       value="2"
                       type="radio"
-                      class="userRatings"
+                      className="p-2"
                       onChange={handleChange}
                     />
                   </label>

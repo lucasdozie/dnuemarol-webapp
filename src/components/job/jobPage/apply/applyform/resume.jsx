@@ -24,12 +24,12 @@ function ResForm() {
   return (
     <>
       <div className="text-blackTint py-32 bg-blueTint bg-opacity-10 ">
-        <div className="rounded shadow-2xl mx-[300px] py-10 bg-blues-pattern bg-opacity-20">
+        <div className="rounded  mx-[300px] py-10 bg-blues-pattern bg-opacity-20">
           <div className="px-6 py-2">
-            <h4 className="pl-10 font-semibold text-lg underline">Resume</h4>
+            <h1 className="font-semibold text-xl underline">Resume</h1>
           </div>
 
-          <form className="pl-28">
+          <form className="px-5">
             <div className="1">
               <p className="font-semibold text-base py-3 underline">
                 Education
@@ -42,7 +42,7 @@ function ResForm() {
                   <div className="flex rounded items-center mb-4 w-[600px] ">
                     <div className="px-2"><FaUniversity/></div>
                     <input
-                      className="bg-transparent	w-[564px] leading-[45px]"
+                      className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                       name="tertiary"
                       placeholder="Tertiary Institution"
                       type="text"
@@ -59,7 +59,7 @@ function ResForm() {
                     <div className="px-2"><GrCertificate/></div>
                     <input
                     placeholder="Degree"
-                      className="bg-transparent	w-[564px] leading-[45px]"
+                      className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                       name="degree"
                       type="text"
                       value={formData.degree}
@@ -75,7 +75,7 @@ function ResForm() {
                     <div className="px-2"><MdClass/></div>
                     <input
                     placeholder="Course"
-                      className="bg-transparent	w-[564px] leading-[45px]"
+                      className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                       name="course"
                       type="text"
                       value={formData.course}
@@ -93,7 +93,7 @@ function ResForm() {
                 <div className="px-2"><MdWork/></div>
                 <input
                 placeholder="Years of experience"
-                  className="bg-transparent	w-[564px] leading-[45px]"
+                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                   name="course"
                   type="text"
                   value={formData.course}
@@ -112,7 +112,7 @@ function ResForm() {
                 <div className="px-2"><GiSkills/></div>
                 <input
                 placeholder="Applicable skills, training or proficiencies."
-                  className="bg-transparent	w-[564px] leading-[45px]"
+                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                   name="skills"
                   type="text"
                   value={formData.skills}
@@ -142,7 +142,7 @@ function ResForm() {
                 <div>
                   <input
                   placeholder="Expected Salary"
-                    className="bg-transparent	w-[564px] leading-[45px]"
+                    className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
                     name="skills"
                     type="text"
                     value={formData.skills}
@@ -157,7 +157,7 @@ function ResForm() {
               </div>
               <div className="1">
                 <input
-                  className="h-12 bg-transparent	w-[564px] leading-[45px];"
+                  className="h-12 bg-transparent	w-[564px] leading-[45px] outline-none border-hidden;"
                   name="comment"
                   placeholder="Enter your comment here..."
                   value={formData.comment}

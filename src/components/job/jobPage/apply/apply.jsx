@@ -6,7 +6,7 @@ function ApplyForm() {
   return (
     <>
       <div className=" text-blackTint py-32 bg-blueTint bg-opacity-10 ">
-        <div className="rounded shadow-2xl mx-[300px] bg-blues-pattern bg-opacity-20">
+        <div className="rounded mx-[300px] bg-blues-pattern bg-opacity-20">
           <div className="px-6 py-5">
             <p className=""></p>
             <h1 className="text-2xl font-bold text-center">Apply Here</h1>
@@ -19,10 +19,10 @@ function ApplyForm() {
               Application Form.
             </p>
           </div>
-          <div className="pb-8 ">
-            <p className="pl-10 font-semibold text-lg underline">Background Data</p>
+          <div className="pb-4 ">
+            <h1 className="px-5 font-semibold text-xl underline">Background Data</h1>
           </div>
-          <div className="pl-28">
+          <div className="px-5 py-5">
             <BioForm />
           </div>
           <div className="pl-[700px] py-10">

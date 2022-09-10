@@ -6,9 +6,9 @@ import Writeup from "./signup/writeup";
 function SignIn() {
   return (
     <>
-      <div className="text-center text-blackTint py-32 bg-blues-pattern ">
-        <div className="flex justify-center rounded shadow-2xl  mx-[300px]">
-        <div className="py-44 rounded-lg shadow-inner">
+      <div className=" text-blackTint py-32 bg-blues-pattern ">
+        <div className="flex justify-center rounded mx-[300px]">
+        <div className=" py-44 rounded-lg text-center">
             <Writeup
               text="Sign Up"
               title="New here?"
@@ -18,7 +18,7 @@ function SignIn() {
           </div>
           <div className="px-5">
           <div>
-            <div className="py-10">
+            <div className="py-10 text-center">
               <p className="font-extrabold text-xl"> Sign In</p>
               <p className="font-bold text-lg">It is so nice to have you back</p>
             </div>

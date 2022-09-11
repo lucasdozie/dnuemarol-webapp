@@ -1,24 +1,28 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes,Route, } from "react-router-dom";
-import Top from './components/landingPage/top/top';
-import Coaching from './components/landingPage/coaching/coaching';
-import Companies from './components/landingPage/companies/companies';
-import Middle from './components/landingPage/middle/middle';
-import Advice from './components/landingPage/advice/advice';
-import AllJobs from './components/job/jobsPage/alljobs';
-import Header from './components/landingPage/header/header';
-import Footer from './components/landingPage/footer/footer';
-import JobList from './components/job/jobsPage/jobLists/jobList';
+import Top from './components/landingPage/top';
+import Coaching from './components/landingPage/coaching';
+import Companies from './components/landingPage/companies';
+import Middle from './components/landingPage/middle';
+import Advice from './components/landingPage/advice';
+
+import Header from './components/landingPage/header';
+import Footer from './components/landingPage/footer';
+
 import SignUp from './components/form/signup';
 import SignIn from './components/form/signin';
-import ApplyForm from './components/job/jobPage/apply/apply';
-import JobPage from './components/job/jobPage/jobpage';
-import ResForm from './components/job/jobPage/apply/applyform/resume';
-import BioForm from './components/job/jobPage/apply/applyform/bioForm';
+
+
 import Employer from './components/others/employer';
 import LastSignup from './components/others/lastSignup';
 import Home from './components/home';
+import AllJobs from './components/landingPage/alljobs';
+import JobList from './components/job/Alljob/jobList';
+import JobPage from './components/job/jobPage/jobpage';
+import ResForm from './components/apply/applyform/resume';
+import BioForm from './components/apply/applyform/bioForm';
+import ApplyForm from './components/apply/apply';
 
 
 function App() {

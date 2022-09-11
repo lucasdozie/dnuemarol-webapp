@@ -1,6 +1,6 @@
-import first from "../images/firsttile.png";
-import second from "../images/secondtile.png";
-import third from "../images/thirdtile.png";
+import first from "./images/firsttile.png";
+import second from "./images/secondtile.png";
+import third from "./images/thirdtile.png";
 function Middle() {
   const tiles = [
     {

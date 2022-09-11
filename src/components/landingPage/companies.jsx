@@ -1,10 +1,11 @@
-import nike from "../images/nikelogo.png";
-import tiktok from "../images/tiktoklogo.png";
-import audible from "../images/audible.png";
-import allbirs from "../images/allbirslogo.png";
-import robinhood from "../images/robinhood.png";
-import goldman from "../images/goldman.png";
-import Button from "../../others/btn";
+import nike from "./images/nikelogo.png";
+import tiktok from "./images/tiktoklogo.png";
+import audible from "./images/audible.png";
+import allbirs from "./images/allbirslogo.png";
+import robinhood from "./images/robinhood.png";
+import goldman from "./images/goldman.png";
+import Button from "../others/btn";
+
 
 function Companies() {
   const logos = [

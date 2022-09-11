@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Button from "../../../../others/btn";
+
 import { FaUniversity,FaRegMoneyBillAlt } from "react-icons/fa";
 import { GrCertificate} from "react-icons/gr";
 import { MdClass,MdWork } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
+import Button from "../../others/btn";
 
 function ResForm() {
   const [formData, setformData] = useState({
@@ -12,8 +13,7 @@ function ResForm() {
     course: "",
     skills: "",
     file: "",
-    comment: "",
-    states: "",
+    currentRole: "",
   });
   const handleChange = (e) => {
     setformData({
@@ -153,13 +153,13 @@ function ResForm() {
             </div>
             <div className="1">
               <div className="1">
-                <label for="comments">Any Comments?</label>
+                <label for="comments">Current Role</label>
               </div>
               <div className="1">
                 <input
                   className="h-12 bg-transparent	w-[564px] leading-[45px] outline-none border-hidden;"
-                  name="comment"
-                  placeholder="Enter your comment here..."
+                  name="currentRole"
+                  placeholder="Current Role"
                   value={formData.comment}
                   onChange={handleChange}
                 ></input>

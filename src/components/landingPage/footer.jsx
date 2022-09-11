@@ -1,9 +1,9 @@
-import fb from "../images/footerIcons/sc-facebook-svgrepo-com.svg"
-import pin  from "../images/footerIcons/pinterest-alt-svgrepo-com.svg"
-import linkedin from "../images/footerIcons/linkedin-svgrepo-com (1).svg"
-import ig from "../images/footerIcons/instagram-svgrepo-com (1).svg"
-import twitter from "../images/footerIcons/twitter-svgrepo-com.svg"
-import logo from "../images/dneulogo.svg"
+import fb from "./images/footerIcons/sc-facebook-svgrepo-com.svg"
+import pin  from "./images/footerIcons/pinterest-alt-svgrepo-com.svg"
+import linkedin from "./images/footerIcons/linkedin-svgrepo-com (1).svg"
+import ig from "./images/footerIcons/instagram-svgrepo-com (1).svg"
+import twitter from "./images/footerIcons/twitter-svgrepo-com.svg"
+import logo from "./images/dneulogo.svg"
 function Footer(){
     return(
         <>

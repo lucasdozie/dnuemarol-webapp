@@ -1,7 +1,7 @@
-// import Button from "../btn";
-import card1 from "../images/card1.jpeg";
-import card2 from "../images/card2.webp";
-import card3 from "../images/card3.jpeg";
+
+import card1 from "./images/card1.jpeg";
+import card2 from "./images/card2.webp";
+import card3 from "./images/card3.jpeg";
 
 function Advice() {
   const cards = [

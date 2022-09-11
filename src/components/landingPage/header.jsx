@@ -1,7 +1,7 @@
-import logo from "../images/dneulogo.svg";
+import logo from "./images/dneulogo.svg";
 
 import { Link } from "react-router-dom";
-import SearchIcon from "../../others/searchicon";
+import SearchIcon from "../others/searchicon";
 function Header() {
   return (
     <>

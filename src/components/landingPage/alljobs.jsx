@@ -1,6 +1,7 @@
-import Filters from "./filters/filters";
-import JobList from "./jobLists/jobList";
-import TopList from "./searchTabs/topJob";
+import Filters from "../job/Alljob/filters";
+import JobList from "../job/Alljob/jobList";
+import TopList from "../job/Alljob/topJob";
+
 
 function AllJobs(){
     return(

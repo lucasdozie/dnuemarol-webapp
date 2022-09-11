@@ -1,8 +1,8 @@
-import Advice from "./landingPage/advice/advice";
-import Coaching from "./landingPage/coaching/coaching";
-import Companies from "./landingPage/companies/companies";
-import Middle from "./landingPage/middle/middle";
-import Top from "./landingPage/top/top";
+import Advice from "./landingPage/advice";
+import Coaching from "./landingPage/coaching";
+import Companies from "./landingPage/companies";
+import Middle from "./landingPage/middle";
+import Top from "./landingPage/top";
 
 const Home = () => {
   return (

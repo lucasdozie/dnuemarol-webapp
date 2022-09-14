@@ -1,6 +1,12 @@
 import Button from "../others/btn";
 import Info from "./signup/info";
 import Writeup from "./signup/writeup";
+import { useDispatch, useSelector } from 'react-redux';
+
+
+export const UserComponent = () => {
+  const dispatch = useDispatch();
+  const usersInfo = useSelector((state) => state.usersData);
 
 function SignUp() {
   return (

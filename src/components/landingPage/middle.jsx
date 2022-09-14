@@ -1,6 +1,6 @@
-import first from "./images/firsttile.png";
+import first from "./images/firsttile.jpg";
 import second from "./images/secondtile.png";
-import third from "./images/thirdtile.png";
+import third from "./images/thirdtile.jpg";
 function Middle() {
   const tiles = [
     {
@@ -47,7 +47,7 @@ function Middle() {
                 key={tile.id}
               >
               <div className={"absolute " + tile.className1}>
-                  <img src={tile.src} alt="img" className="rounded-full " />
+                  <img src={tile.src} alt="img" className="rounded-full  h-96 w-96" />
                 </div>
                 <div className="p-60"></div>
                 <div className="py-10 pr-20">

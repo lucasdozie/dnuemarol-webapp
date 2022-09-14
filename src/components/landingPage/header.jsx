@@ -2,6 +2,7 @@ import logo from "./images/dneulogo.svg";
 
 import { Link } from "react-router-dom";
 import SearchIcon from "../others/searchicon";
+import Button from "../others/btn";
 function Header() {
   return (
     <>
@@ -11,10 +12,11 @@ function Header() {
             <Link to="/"><img src={logo} alt="logo" className="" /></Link>
           </div>
           <div className="flex justify-evenly pl-4">
-            <input type="search" placeholder="Search Jobs" size="30" />
+            <input type="search" placeholder="Search Jobs" size="30" className="h-8 pl-2 outline-none border-hidden text-black" />
            <div className="pl-1">
-           <SearchIcon/>
+           <SearchIcon className="bg-blue-500 px-2 py-2 outline-none rounded border-hidden"/>
            </div>
+         
           </div>
         </div>
         <div>

@@ -28,13 +28,13 @@ function BioForm() {
             <div className=" font-medium ">
               <label for="name">* Full Name: </label>
             </div>
-            <div className="flex rounded items-center mb-4 w-[600px] ">
-              <div className="px-2">
+            <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300 ">
+              <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
                 <FaRegUser />
               </div>
               <div className="">
                 <input
-                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                  className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
                   autofocus
                   type="text"
                   name="name"
@@ -50,13 +50,13 @@ function BioForm() {
             <div className="font-medium ">
               <label for="email">* Email: </label>
             </div>
-            <div className="flex rounded items-center mb-4 w-[600px] ">
-              <div className="px-2">
+            <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300 ">
+              <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
                 <AiOutlineMail />
               </div>
               <div className="">
                 <input
-                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                  className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
                   type="email"
                   name="email"
                   required
@@ -72,13 +72,13 @@ function BioForm() {
             <div className="font-medium ">
               <label className="">Address</label>
             </div>
-            <div className="flex rounded items-center mb-4 w-[600px]">
-              <div className="px-2">
+            <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
+              <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
                 <FaRegAddressBook />
               </div>
               <div>
                 <input
-                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                  className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
                   name="address"
                   type="text"
                   placeholder="Address"
@@ -92,11 +92,11 @@ function BioForm() {
             <div className="font-medium ">
               <label className="">Mobile Phone</label>
             </div>
-            <div className="flex rounded items-center mb-4 w-[600px]">
-              <div className="px-2"> <FaPhoneAlt/></div>
+            <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
+              <div className="w-10 h-10 flex justify-center items-center flex-shrink-0"> <FaPhoneAlt/></div>
               <div className="">
                 <input
-                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                  className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
                   name="phone"
                   type="text"
                   value={formData.phone}
@@ -112,7 +112,7 @@ function BioForm() {
             </div>
             <div className="">
               <input
-                className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
                 type="date"
                 name="dob"
                 max="125"
@@ -129,7 +129,7 @@ function BioForm() {
             <div className="">
               <ul className="flex">
                 <li className="px-5">
-                  <label className="px-2">
+                  <label className="w-10 h-10 flex justify-center items-center flex-shrink-0">
                     Yes
                     <input
                       name="nat"

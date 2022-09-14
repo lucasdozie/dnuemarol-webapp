@@ -30,19 +30,19 @@ function ResForm() {
           </div>
 
           <form className="px-5">
-            <div className="1">
+            <div className="py-1">
               <p className="font-semibold text-base py-3 underline">
                 Education
               </p>
-              <div className="1">
-                <div className="1">
+              <div className="py-1">
+                <div className="py-1">
                   <div>
-                    <label className="form-label">Tertiary Institution</label>
+                    <label className="font-semibold">Tertiary Institution</label>
                   </div>
-                  <div className="flex rounded items-center mb-4 w-[600px] ">
-                    <div className="px-2"><FaUniversity/></div>
+                  <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
+                    <div className="w-10 h-10 flex justify-center items-center flex-shrink-0"><FaUniversity/></div>
                     <input
-                      className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                      className="bg-transparent	w-[564px] pl-2 leading-[45px] placeholder:text-lg font-semibold  outline-none border-hidden"
                       name="tertiary"
                       placeholder="Tertiary Institution"
                       type="text"
@@ -51,15 +51,15 @@ function ResForm() {
                     />
                   </div>
                 </div>
-                <div className="1">
+                <div className="py-1">
                   <div>
-                    <label className="form-label">Degree</label>
+                    <label className="font-semibold">Degree</label>
                   </div>
-                  <div className="flex rounded items-center mb-4 w-[600px] ">
-                    <div className="px-2"><GrCertificate/></div>
+                  <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
+                    <div className="w-10 h-10 flex justify-center items-center flex-shrink-0"><GrCertificate/></div>
                     <input
                     placeholder="Degree"
-                      className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                      className="bg-transparent	w-[564px] pl-2 leading-[45px] placeholder:text-lg font-semibold  outline-none border-hidden"
                       name="degree"
                       type="text"
                       value={formData.degree}
@@ -67,15 +67,15 @@ function ResForm() {
                     />
                   </div>
                 </div>
-                <div className="1">
+                <div className="py-1">
                   <div>
-                    <label className="form-label">Course</label>
+                    <label className="font-semibold">Course</label>
                   </div>
-                  <div className="flex rounded items-center mb-4 w-[600px] ">
-                    <div className="px-2"><MdClass/></div>
+                  <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
+                    <div className="w-10 h-10 flex justify-center items-center flex-shrink-0"><MdClass/></div>
                     <input
                     placeholder="Course"
-                      className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                      className="bg-transparent	w-[564px] pl-2 leading-[45px] placeholder:text-lg font-semibold  outline-none border-hidden"
                       name="course"
                       type="text"
                       value={formData.course}
@@ -85,15 +85,29 @@ function ResForm() {
                 </div>
               </div>
             </div>
-            <div className="1">
-              <div>
-                <label className="form-label">Years of experience</label>
+            <div className="py-1">
+              <div className="py-1">
+                <label className="font-semibold">Current Role</label>
               </div>
-              <div className="flex rounded items-center mb-4 w-[600px] ">
-                <div className="px-2"><MdWork/></div>
+              <div className="py-1">
+                <input
+                  className="h-12 bg-transparent	w-[564px] pl-2 leading-[45px] placeholder:text-lg font-semibold  outline-none border-hidden;"
+                  name="currentRole"
+                  placeholder="Current Role"
+                  value={formData.comment}
+                  onChange={handleChange}
+                ></input>
+              </div>
+            </div>
+            <div className="py-1">
+              <div>
+                <label className="font-semibold">Years of experience</label>
+              </div>
+              <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
+                <div className="w-10 h-10 flex justify-center items-center flex-shrink-0"><MdWork/></div>
                 <input
                 placeholder="Years of experience"
-                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                  className="bg-transparent	w-[564px] pl-2 leading-[45px] placeholder:text-lg font-semibold  outline-none border-hidden"
                   name="course"
                   type="text"
                   value={formData.course}
@@ -101,18 +115,18 @@ function ResForm() {
                 />
               </div>
             </div>
-            <div className="1">
-              <div className="1">
+            <div className="py-1">
+              <div className="py-1">
               <div>
-                <label className="form-label">
+                <label className="font-semibold">
                   List any applicable skills, training or proficiencies.
                 </label>
                 </div>
-                <div className="flex rounded items-center mb-4 w-[600px] ">
-                <div className="px-2"><GiSkills/></div>
+                <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
+                <div className="w-10 h-10 flex justify-center items-center flex-shrink-0"><GiSkills/></div>
                 <input
                 placeholder="Applicable skills, training or proficiencies."
-                  className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
+                  className="bg-transparent	w-[564px] pl-2 leading-[45px] placeholder:text-lg font-semibold  outline-none border-hidden"
                   name="skills"
                   type="text"
                   value={formData.skills}
@@ -121,9 +135,27 @@ function ResForm() {
               </div>
               </div>
             </div>
+            <div className="py-1">
+              <div className="py-1">
+                <label className="font-semibold">Expected Salary</label>
+              </div>
+              <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
+                <div className="w-10 h-10 flex justify-center items-center flex-shrink-0"><FaRegMoneyBillAlt/></div>
+                <div>
+                  <input
+                  placeholder="Expected Salary"
+                    className="bg-transparent	w-[564px] pl-2 leading-[45px] placeholder:text-lg font-semibold  outline-none border-hidden"
+                    name="skills"
+                    type="text"
+                    value={formData.skills}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+            </div>
             <div className="py-5">
               <div>
-                <label className="mr-4">Upload your CV:</label>
+                <label className="mr-4 font-semibold">Upload your CV:</label>
               </div>
               <input
               placeholder="Upload your CV"
@@ -133,38 +165,7 @@ function ResForm() {
                 onChange={handleChange}
               />
             </div>
-            <div className="1">
-              <div className="1">
-                <label className="form-label">Expected Salary</label>
-              </div>
-              <div className="flex rounded items-center mb-4 w-[600px] ">
-                <div className="px-2"><FaRegMoneyBillAlt/></div>
-                <div>
-                  <input
-                  placeholder="Expected Salary"
-                    className="bg-transparent	w-[564px] leading-[45px] outline-none border-hidden"
-                    name="skills"
-                    type="text"
-                    value={formData.skills}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="1">
-              <div className="1">
-                <label for="comments">Current Role</label>
-              </div>
-              <div className="1">
-                <input
-                  className="h-12 bg-transparent	w-[564px] leading-[45px] outline-none border-hidden;"
-                  name="currentRole"
-                  placeholder="Current Role"
-                  value={formData.comment}
-                  onChange={handleChange}
-                ></input>
-              </div>
-            </div>
+            
             <div className="pl-[450px] pt-5 flex">
               <div className="px-4">
                 <Button

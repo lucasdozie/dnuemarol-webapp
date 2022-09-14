@@ -7,7 +7,7 @@ function AllJobs(){
     return(
         <>
         <div className="text-center mx-80 mb-40">
-            <div className="py-32" >
+            <div className="py-40" >
                 <TopList/>
             </div>
             <div className="px-20">

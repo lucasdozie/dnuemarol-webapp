@@ -25,8 +25,8 @@ function ResForm() {
     <>
       <div className="text-blackTint py-32 bg-blueTint bg-opacity-10 ">
         <div className="rounded  mx-[300px] py-10 bg-blues-pattern bg-opacity-20">
-          <div className="px-6 py-2">
-            <h1 className="font-semibold text-xl underline">Resume</h1>
+          <div className="px-3 py-2">
+            <h1 className="font-bold text-3xl underline">Resume</h1>
           </div>
 
           <form className="px-5">

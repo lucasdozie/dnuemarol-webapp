@@ -1,8 +1,8 @@
 import States from "../state/lga";
 import { useState } from "react";
-import { FaRegUser,FaRegAddressBook, FaPhoneAlt } from "react-icons/fa";
+import { FaRegUser, FaRegAddressBook, FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
-import {  } from "react-icons/fa";
+import {} from "react-icons/fa";
 
 function BioForm() {
   const [formData, setformData] = useState({
@@ -93,7 +93,10 @@ function BioForm() {
               <label className="">Mobile Phone</label>
             </div>
             <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
-              <div className="w-10 h-10 flex justify-center items-center flex-shrink-0"> <FaPhoneAlt/></div>
+              <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
+                {" "}
+                <FaPhoneAlt />
+              </div>
               <div className="">
                 <input
                   className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
@@ -128,41 +131,37 @@ function BioForm() {
             </div>
             <div className="">
               <ul className="flex">
-                <li className="px-5">
-                  <label className="w-10 h-10 flex justify-center items-center flex-shrink-0">
-                    Yes
-                    <input
-                      name="nat"
-                      value="1"
-                      type="radio"
-                      className="p-2"
-                      onChange={handleChange}
-                    />
-                  </label>
+                <li className="px-5 lex justify-center items-center flex-shrink-0">
+                  <label className="px-3">Yes</label>
+                  <input
+                    name="nat"
+                    value="1"
+                    type="radio"
+                    className="px-2"
+                    onChange={handleChange}
+                  />
                 </li>
-                <li className="radio">
-                  <label>
-                    No
-                    <input
-                      name="nat"
-                      value="2"
-                      type="radio"
-                      className="p-2"
-                      onChange={handleChange}
-                    />
-                  </label>
+                <li className="px-5 flex justify-center items-center flex-shrink-0">
+                  <label className="px-3">No</label>
+                  <input
+                    name="nat"
+                    value="2"
+                    type="radio"
+                    
+                    onChange={handleChange}
+                  />
                 </li>
               </ul>
             </div>
           </div>
-          <div className="py-3">
+          {/* <div className="py-3">
             <div className="font-medium ">
               <label for="state of origin">State of Origin</label>
             </div>
             <div className="">
               <States />
             </div>
-          </div>
+          </div> */}
         </form>
       </div>
     </>

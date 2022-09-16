@@ -1,18 +1,15 @@
-import Button from "../others/btn";
+// import Button from "../others/btn";
 import Info from "./signup/info";
 import Writeup from "./signup/writeup";
-import { useDispatch, useSelector } from 'react-redux';
 
 
-export const UserComponent = () => {
-  const dispatch = useDispatch();
-  const usersInfo = useSelector((state) => state.usersData);
+
 
 function SignUp() {
   return (
     <>
       <div className="  text-center text-blackTint py-32 bg-blues-pattern ">
-        <div className="flex justify-center rounded   mx-[250px]">
+        <div className="flex justify-center rounded mx-[250px]">
           <div className="py-44 rounded-lg ">
             <Writeup
               text="Sign In"
@@ -42,13 +39,6 @@ function SignUp() {
               </a>
             </p>
 
-            <div className="text-center mt-6 md:mt-12">
-              <Button
-                text="Sign Up"
-                link="/lastsignup"
-                className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300"
-              />
-            </div>
           </div>
         </div>
       </div>

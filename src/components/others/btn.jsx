@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
-const Button = (props) => {
-  const handleClick = (e) => {
-    console.log(props.data);
-  };
+const Button = ({onClick,className,link,text}) => {
+  
 
   return (
     <>
-      <button onClick={handleClick} className={props.className}>
-        <Link to={props.link}>
-          <p>{props.text}</p>
+      <button onClick={onClick} className={className}>
+        <Link to={link}>
+          <p>{text}</p>
         </Link>
       </button>
     </>

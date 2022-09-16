@@ -1,4 +1,4 @@
-import States from "../state/lga";
+// import States from "../state/lga";
 import { useState } from "react";
 import { FaRegUser, FaRegAddressBook, FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";

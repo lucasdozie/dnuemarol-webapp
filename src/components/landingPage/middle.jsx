@@ -47,7 +47,7 @@ function Middle() {
                 key={tile.id}
               >
               <div className={"absolute " + tile.className1}>
-                  <img src={tile.src} alt="img" className="rounded-full  h-96 w-96" />
+                  <img src={tile.src} alt="img" className="rounded-full  h-[350px] w-[350px]" />
                 </div>
                 <div className="p-60"></div>
                 <div className="py-10 pr-20">

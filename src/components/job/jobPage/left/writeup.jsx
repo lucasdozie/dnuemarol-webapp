@@ -86,9 +86,9 @@ function Writeups() {
               <Button text="APPLY"  className="px-10 py-3 bg-blue-500 rounded font-extrabold text-white text-base" link="/apply"/>
             </div>
           </div>
-          <div className="pt-5">
+          {/* <div className="pt-5">
             <Perks />
-          </div>
+          </div> */}
           <div>
             <Search/>
           </div>

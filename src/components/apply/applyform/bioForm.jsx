@@ -3,9 +3,13 @@ import { useState } from "react";
 import { FaRegUser, FaRegAddressBook, FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import {} from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import {addBioData }from "../../redux/feautures/bioform";
+import Button from "../../others/btn";
 
 function BioForm() {
-  const [formData, setformData] = useState({
+  const [bioData, setBioData] = useState({
     name: "",
     email: "",
     address: "",
@@ -15,18 +19,25 @@ function BioForm() {
     states: "",
   });
   const handleChange = (e) => {
-    setformData({
-      ...formData,
+    setBioData({
+      ...bioData,
       [e.target.name]: e.target.value,
     });
   };
+
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.bio);
+  useEffect(() => {
+    // console.log(state);
+  }, [state]);
+
   return (
     <>
       <div>
         <form>
           <div className="py-3">
             <div className=" font-medium ">
-              <label for="name">* Full Name: </label>
+              <label>* Full Name: </label>
             </div>
             <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300 ">
               <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
@@ -35,11 +46,11 @@ function BioForm() {
               <div className="">
                 <input
                   className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
-                  autofocus
+                
                   type="text"
                   name="name"
                   placeholder="Enter your full name"
-                  value={formData.name}
+                  value={bioData.name}
                   onChange={handleChange}
                   required
                 />
@@ -48,7 +59,7 @@ function BioForm() {
           </div>
           <div className="py-3">
             <div className="font-medium ">
-              <label for="email">* Email: </label>
+              <label>: </label>
             </div>
             <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300 ">
               <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
@@ -61,7 +72,7 @@ function BioForm() {
                   name="email"
                   required
                   placeholder="Enter your Email"
-                  value={formData.email}
+                  value={bioData.email}
                   onChange={handleChange}
                 />
               </div>
@@ -82,7 +93,7 @@ function BioForm() {
                   name="address"
                   type="text"
                   placeholder="Address"
-                  value={formData.address}
+                  value={bioData.address}
                   onChange={handleChange}
                 />
               </div>
@@ -102,7 +113,7 @@ function BioForm() {
                   className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
                   name="phone"
                   type="text"
-                  value={formData.phone}
+                  value={bioData.phone}
                   onChange={handleChange}
                   placeholder="Mobile number"
                 />
@@ -111,7 +122,7 @@ function BioForm() {
           </div>
           <div className="py-3">
             <div className="font-medium ">
-              <label for="Date of birth">* Date of Birth: </label>
+              <label>* Date of Birth: </label>
             </div>
             <div className="">
               <input
@@ -120,14 +131,14 @@ function BioForm() {
                 name="dob"
                 max="125"
                 placeholder="Date of Birth"
-                value={formData.dob}
+                value={bioData.dob}
                 onChange={handleChange}
               />
             </div>
           </div>
           <div className="py-3">
             <div className="font-medium ">
-              <label for="Nationality">* Are you Nigerian by Nationality</label>
+              <label> Are you Nigerian by Nationality</label>
             </div>
             <div className="">
               <ul className="flex">
@@ -147,21 +158,24 @@ function BioForm() {
                     name="nat"
                     value="2"
                     type="radio"
-                    
                     onChange={handleChange}
                   />
                 </li>
               </ul>
             </div>
           </div>
-          {/* <div className="py-3">
-            <div className="font-medium ">
-              <label for="state of origin">State of Origin</label>
-            </div>
-            <div className="">
-              <States />
-            </div>
-          </div> */}
+          <div className="pl-[700px] py-10">
+            <Button
+              text="Next"
+              className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded-full transition-colors duration-300"
+              link= "/resform "
+              onClick={() => {
+                // console.log(bioData)
+                dispatch(addBioData(bioData));
+              }}
+            />
+          </div>
+          
         </form>
       </div>
     </>

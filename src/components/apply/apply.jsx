@@ -1,4 +1,4 @@
-import Button from "../others/btn";
+// import Button from "../others/btn";
 import BioForm from "./applyform/bioForm";
 
 
@@ -25,13 +25,7 @@ function ApplyForm() {
           <div className="px-5 py-5">
             <BioForm />
           </div>
-          <div className="pl-[700px] py-10">
-            <Button
-              text="Next"
-              className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded-full transition-colors duration-300"
-              link="/resForm"
-            />
-          </div>
+          
         </div>
       </div>
     </>

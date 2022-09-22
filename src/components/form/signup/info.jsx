@@ -4,8 +4,10 @@ import { FaLock } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Button from "../../others/btn";
 import { useDispatch, useSelector } from "react-redux";
-import UpdateData from "../../reduxsetup/action/actiontype";
+// import UpdateData from "../../reduxsetup/action/actiontype";
 import { useEffect } from "react";
+import { createUser} from '../../redux/feautures/userSignup'
+import axios from "axios";
 
 function Info() {
   const [formData, setformData] = useState({
@@ -13,6 +15,12 @@ function Info() {
     password: "",
     email: "",
   });
+
+  useEffect(()=>{
+    console.log('hey');
+    
+  }, [])
+
   const handleChange = (e) => {
     setformData({
       ...formData,
@@ -20,11 +28,9 @@ function Info() {
     });
   };
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.users);
+  const state = useSelector((state) => state.userSignup);
   console.log(state);
-  useEffect(()=>{
-    // console.log(state);
-  }, [state])
+  
   return (
     <>
       <div className="">
@@ -87,9 +93,22 @@ function Info() {
           text="Sign Up"
           link=""
           className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300"
-          onClick={() => {
+          onClick={async () => {
             // console.log(formData)
-            dispatch(UpdateData( formData.name,  formData.email, formData.password ));
+            // const options = {
+            //   method: "POST",
+            //   headers: { 'Content-Type': 'application/json' },
+            //   body: JSON.stringify(formData)
+            // }
+            // fetch("https://1d94-105-112-229-242.eu.ngrok.io/mariam", options)
+            // .then(response => response.json())
+            // .then(data => console.log(data))
+            const res = await axios.post("https://rapidmedical-backend.herokuapp.com/mariam", formData, {
+              headers: {
+                "content-type": "application/json"
+              }
+            })
+            console.log(res.data);
           }}
         />
       </div>

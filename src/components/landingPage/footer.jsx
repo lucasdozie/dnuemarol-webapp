@@ -10,7 +10,7 @@ function Footer(){
         <div className="bg-black flex justify-around leading-7 text-white py-10">
             <div className="block">
                 <div className="w-28 h-1"><img src={logo} alt=""/></div>
-               <div className="py-5"> <p>©2022 Daily Muse Inc.</p></div>
+               <div className="py-5 text-xs"> <p>©2022 DNUEMAROL</p></div>
             </div>
             <div className="flex justify-around">
                 <div className="px-3">

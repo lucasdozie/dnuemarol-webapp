@@ -2,11 +2,11 @@ import logo from "./images/dneulogo.svg";
 
 import { Link } from "react-router-dom";
 import SearchIcon from "../others/searchicon";
-import Button from "../others/btn";
+// import Button from "../others/btn";
 function Header() {
   return (
     <>
-      <div className="flex justify-between bg-black px-5 py-6 text-white sticky top-0 z-50">
+      <div className="flex justify-between bg-black px-5 py-6 text-white sticky top-0 z-50 lg:min-w-4xl	">
         <div className="flex justify-evenly">
           <div className="w-28 h-1  pt-2">
             <Link to="/"><img src={logo} alt="logo" className="" /></Link>

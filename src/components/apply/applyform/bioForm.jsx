@@ -3,10 +3,11 @@ import { useState } from "react";
 import { FaRegUser, FaRegAddressBook, FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import {} from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import {addBioData }from "../../redux/feautures/bioform";
+// import { useDispatch, useSelector } from "react-redux";
+// import { useEffect } from "react";
+// import { addBioData } from "../../redux/feautures/bioform";
 import Button from "../../others/btn";
+import axios from "axios";
 
 function BioForm() {
   const [bioData, setBioData] = useState({
@@ -25,11 +26,24 @@ function BioForm() {
     });
   };
 
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state.bio);
-  useEffect(() => {
-    // console.log(state);
-  }, [state]);
+  // const dispatch = useDispatch();
+  // const state = useSelector((state) => state.bio);
+  // useEffect(() => {
+  //   // console.log(state);
+  // }, [state]);
+
+  const handleClick = async () => {
+    const res = await axios.post(
+      "https://rapidmedical-backend.herokuapp.com/mariam",
+      bioData,
+      {
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
+    console.log(res.data);
+  };
 
   return (
     <>
@@ -46,7 +60,6 @@ function BioForm() {
               <div className="">
                 <input
                   className="bg-transparent	w-[564px] placeholder:text-lg font-semibold leading-[45px] outline-none border-hidden pl-2"
-                
                   type="text"
                   name="name"
                   placeholder="Enter your full name"
@@ -168,14 +181,14 @@ function BioForm() {
             <Button
               text="Next"
               className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded-full transition-colors duration-300"
-              link= "/resform "
-              onClick={() => {
+              link="/resform "
+              onClick={
+                handleClick
                 // console.log(bioData)
-                dispatch(addBioData(bioData));
-              }}
+                // dispatch(addBioData(bioData));
+              }
             />
           </div>
-          
         </form>
       </div>
     </>

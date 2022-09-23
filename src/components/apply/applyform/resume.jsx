@@ -5,9 +5,10 @@ import { GrCertificate } from "react-icons/gr";
 import { MdClass, MdWork } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
 import Button from "../../others/btn";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { addResume } from "../../redux/feautures/bioform";
+// import { useDispatch, useSelector } from "react-redux";
+// import { useEffect } from "react";
+// import { addResume } from "../../redux/feautures/bioform";
+import axios from "axios";
 
 function Resform() {
   const [resumeData, setResumeData] = useState({
@@ -16,7 +17,7 @@ function Resform() {
     course: "",
     experience: "",
     skills: "",
-    salary:"",
+    salary: "",
     file: "",
     currentRole: "",
   });
@@ -27,12 +28,25 @@ function Resform() {
     });
   };
 
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state.resume);
-  console.log(state);
-  useEffect(() => {
-    // console.log(state);
-  }, [state]);
+  // const dispatch = useDispatch();
+  // const state = useSelector((state) => state.resume);
+  // console.log(state);
+  // useEffect(() => {
+  //   // console.log(state);
+  // }, [state]);
+
+  const handleClick = async (name) => {
+    const res = await axios.post(
+      `${process.env.REACT_APP_ENDPOINT}/mariam`,
+      resumeData,
+      {
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
+    console.log(res.data);
+  };
 
   return (
     <>
@@ -206,11 +220,10 @@ function Resform() {
                   text="Submit"
                   className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded-full transition-colors duration-300"
                   link="/alljobs"
-                  onClick={() => {
-                    // console.log(resumeData)
-                    dispatch(
-                      addResume(resumeData));
-                  }}
+                  onClick={handleClick}
+                  // console.log(resumeData)
+                  // dispatch(
+                  //   addResume(resumeData));
                 />
               </div>
             </div>

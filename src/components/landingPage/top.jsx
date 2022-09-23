@@ -3,8 +3,8 @@ import SearchIcon from "../others/searchicon";
 function Top() {
   return (
     <>
-      <div className="bg-[length:800px,_800px] bg-no-repeat bg-[url(components/landingPage/images/right.jpg),_url(components/landingPage/images/left.jpg)] bg-[position:bottom_left,_bottom_right] bg-[]">
-        <div className="text-center text-white px-48 py-32 font-semibold bg-blue-400 bg-opacity-40">
+      <div className=" lg:bg-[length:800px,_800px] lg:bg-no-repeat lg:bg-[url(components/landingPage/images/right.jpg),_url(components/landingPage/images/left.jpg)] lg:bg-[position:bottom_left,_bottom_right] md:bg-black-pattern]">
+        <div className="text-center text-white px-48 py-32 font-semibold bg-blue-400 bg-opacity-40  lg:text-center">
           <div>
             <p className="text-5xl p-3">
               <strong className="text-blue-400">Where</strong> talented people{" "}
@@ -19,7 +19,7 @@ function Top() {
               values align with your needs.{" "}
             </p>
           </div>
-          <div className="flex justify-center bg-gray-200 ml-72 w-[450px] text-center">
+          <div className="flex justify-center bg-gray-200 ml-72 w-[450px] lg:min-w-3xl">
             <div className="">
               <SearchIcon className="pt-5" />
             </div>

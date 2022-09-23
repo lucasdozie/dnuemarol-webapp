@@ -3,10 +3,10 @@ import { FaRegUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Button from "../../others/btn";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 // import UpdateData from "../../reduxsetup/action/actiontype";
 import { useEffect } from "react";
-import { createUser} from '../../redux/feautures/userSignup'
+// import { createUser} from '../../redux/feautures/userSignup'
 import axios from "axios";
 
 function Info() {
@@ -17,7 +17,6 @@ function Info() {
   });
 
   useEffect(()=>{
-    console.log('hey');
     
   }, [])
 
@@ -27,9 +26,32 @@ function Info() {
       [e.target.name]: e.target.value,
     });
   };
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state.userSignup);
-  console.log(state);
+  // const dispatch = useDispatch();
+  // const state = useSelector((state) => state.userSignup);
+  // console.log(state);
+  
+  const handleClick = async () => {
+    // dispatch(
+            //   createUser(formData));
+    // console.log(formData)
+
+    // const options = {
+    //   method: "POST",
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(formData)
+    // }
+    // fetch("https://1d94-105-112-229-242.eu.ngrok.io/mariam", options)
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+
+
+    const res = await axios.post("https://rapidmedical-backend.herokuapp.com/mariam", formData, {
+      headers: {
+        "content-type": "application/json"
+      }
+    })
+    console.log(res.data);
+  }
   
   return (
     <>
@@ -91,25 +113,9 @@ function Info() {
       <div className="text-center mt-6 md:mt-12">
         <Button
           text="Sign Up"
-          link=""
+          link="/alljobs"
           className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300"
-          onClick={async () => {
-            // console.log(formData)
-            // const options = {
-            //   method: "POST",
-            //   headers: { 'Content-Type': 'application/json' },
-            //   body: JSON.stringify(formData)
-            // }
-            // fetch("https://1d94-105-112-229-242.eu.ngrok.io/mariam", options)
-            // .then(response => response.json())
-            // .then(data => console.log(data))
-            const res = await axios.post("https://rapidmedical-backend.herokuapp.com/mariam", formData, {
-              headers: {
-                "content-type": "application/json"
-              }
-            })
-            console.log(res.data);
-          }}
+          onClick={handleClick}
         />
       </div>
     </>

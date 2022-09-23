@@ -19,6 +19,7 @@ module.exports = {
         'general-pattern': "url('components/landingPage/images/genbg.png')",
         'blue-pattern': "url('components/landingPage/images/bg.png')",
         'blues-pattern': "url('components/landingPage/images/bg2.png')",
+        'black-pattern':"url('components/landingPage/images/right.jpg')"
       },
       colors:{
         grayLight:"#3d3d3d",

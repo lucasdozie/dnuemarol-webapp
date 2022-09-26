@@ -35,7 +35,7 @@ function Resform() {
   //   // console.log(state);
   // }, [state]);
 
-  const handleClick = async (name) => {
+  const handleClick = async () => {
     const res = await axios.post(
       `${process.env.REACT_APP_ENDPOINT}/mariam`,
       resumeData,

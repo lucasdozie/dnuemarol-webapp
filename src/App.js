@@ -23,7 +23,6 @@ import ApplyForm from "./components/apply/apply";
 import Dashboard from "./components/dashboard/dashbord";
 import Profile from "./components/dashboard/profile/profile";
 
-
 function App() {
   return (
     <Router>
@@ -52,5 +51,3 @@ function App() {
 }
 
 export default App;
-
-

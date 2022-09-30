@@ -20,11 +20,11 @@ function Ham(props) {
           {isNavOpen && (
             <div className="MENU-LINK-MOBILE-OPEN   flex flex-col items-center justify-between max-w-[500px] top-[170px] bg-gray-100 left-0 absolute text-center">
               <div
-                className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
+                className="CROSS-ICON absolute top-0 right-0 px-4 py-2"
                 onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
               >
                 <svg
-                  className="h-2 w-2 text-gray-600"
+                  className="h-4 w-4 text-gray-600"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -36,21 +36,25 @@ function Ham(props) {
                   <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
               </div>
-              <div className=" my-2 border-t-2 border-b-2 ">
-                <div className=" my-2  ">
-                  <h1>{props.ui} </h1>
-                </div>
-                <div className="my-3 px-10 pt-2 ">
-                  <h1>{props.name}</h1>
-                  <p className="py-1">{props.experience}</p>
-                  <p className="py-1">{props.avail}</p>
-                  <p className="py-1">{props.location}</p>
-                  <p className="py-1">{props.email}</p>
-                  {/* <div>
+            <div className="pr-5 py-5">
+            {window.location.pathname !== "/profile" && (
+                <div className=" my-2 border-t-2 border-b-2 ">
+                  <div className=" my-2  ">
+                    <h1>{props.ui} </h1>
+                  </div>
+                  <div className="my-3 px-10 pt-2 ">
+                    <h1>{props.name}</h1>
+                    <p className="py-1">{props.experience}</p>
+                    <p className="py-1">{props.avail}</p>
+                    <p className="py-1">{props.location}</p>
+                    <p className="py-1">{props.email}</p>
+                    {/* <div>
                 <Button text="update"/>
                 </div> */}
+                  </div>
                 </div>
-              </div>
+              )}
+            </div>
               <div className=" my-3 uppercase">
                 <a href="/portfolio">Skill Assessment</a>
               </div>

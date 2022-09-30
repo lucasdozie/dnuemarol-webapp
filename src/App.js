@@ -21,6 +21,8 @@ import ResForm from "./components/apply/applyform/resume";
 import BioForm from "./components/apply/applyform/bioForm";
 import ApplyForm from "./components/apply/apply";
 import Dashboard from "./components/dashboard/dashbord";
+import Profile from "./components/dashboard/profile/profile";
+
 
 function App() {
   return (
@@ -41,6 +43,7 @@ function App() {
         <Route path="/employer" element={<Employer />} />
         <Route path="/lastsignup" element={<LastSignup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
     </Router>

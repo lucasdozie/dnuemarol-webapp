@@ -4,7 +4,7 @@ import Button from "../../others/btn";
 function JobList() {
   return (
     <>
-      <div className="shadow-xl flex justify-between p-5">
+      <div className="flex justify-between gap-40 p-5 text-blackTint">
         <div className="flex">
           <div>
             <img src="" />

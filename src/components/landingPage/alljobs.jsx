@@ -8,7 +8,7 @@ function AllJobs(){
     return(
         <>
         <Header/>
-        <div className="text-center mx-80 mb-40">
+        <div className="text-center mx-80 mb-40 text-blackTint">
             <div className="py-40" >
                 <TopList/>
             </div>

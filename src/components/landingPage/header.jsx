@@ -1,9 +1,10 @@
 import logo from "./images/dneulogo.svg";
-
+import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SearchIcon from "../others/searchicon";
+import Button from "../others/btn";
 // import Button from "../others/btn";
-function Header({path}) {
+function Header({ path }) {
   console.log(path);
   return (
     <>
@@ -14,22 +15,22 @@ function Header({path}) {
               <img src={logo} alt="logo" className="" />
             </Link>
           </div>
-          {
-            (window.location.pathname !== "/" || window.location.pathname !== "/dashboard") && <div className="flex justify-evenly pl-4">
-            <input
-              type="search"
-              placeholder="Search Jobs"
-              size="30"
-              className="h-8 pl-2 outline-none border-hidden text-black"
-            />
-            <div className="pl-1">
-              <SearchIcon className="bg-blue-500 px-2 py-2 outline-none rounded border-hidden" />
+          {(window.location.pathname !== "/" ||
+            window.location.pathname !== "/dashboard") && (
+            <div className="flex justify-evenly pl-4">
+              <input
+                type="search"
+                placeholder="Search Jobs"
+                size="30"
+                className="h-8 pl-2 outline-none border-hidden text-black"
+              />
+              <div className="pl-1">
+                <SearchIcon className="bg-blue-500 px-2 py-2 outline-none rounded border-hidden" />
+              </div>
             </div>
-          </div>
-          }
-          
+          )}
         </div>
-        <div>
+        <div className="flex">
           <Link to="/allJobs" className="p-3">
             JOBS
           </Link>
@@ -45,10 +46,49 @@ function Header({path}) {
           <a href="#" className="p-3 border-solid border-2 rounded">
             EMPLOYERS
           </a>
-          { window.location.pathname !== "/dashboard" &&  <Link to="/SignUp" className="p-3">
-            SIGN IN
-          </Link>}
-         
+          {(window.location.pathname === "/dashboard"||window.location.pathname === "/profile") ? (
+          
+
+            <div className="p-3 ">
+              <div className=" dropdown block relative">
+                <button className=" ">
+                  <span className="">
+                    <FaUserAlt />
+                  </span>
+                </button>
+                <ul className="dropdown-menu right-[-30px] min-w-96 absolute hidden text-gray-700 pt-1">
+                  <li className="">
+                    <a
+                      className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap px-10"
+                      href="#"
+                    >
+                      
+                    </a>
+                  </li>
+                  <li className="">
+                    <Link to="/profile"
+                      className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                     ACCOUNT
+                    </Link>
+                  </li>
+                  <li className="">
+                    <a
+                      className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                      href="#"
+                    >
+                      SIGN OUT
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          ) : (
+            <Link to="/SignUp" className="p-3">
+              SIGN UP
+            </Link>
+          )}
         </div>
       </div>
     </>

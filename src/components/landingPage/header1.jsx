@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from "../others/searchicon";
 import Button from "../others/btn";
 // import Button from "../others/btn";
-function Header({ path }) {
+function Header1({ path }) {
   console.log(path);
   return (
     <>
@@ -15,7 +15,7 @@ function Header({ path }) {
               <img src={logo} alt="logo" className="" />
             </Link>
           </div>
-          {(window.location.pathname !== "/" ||
+          {/* {(window.location.pathname !== "/" ||
             window.location.pathname !== "/dashboard") && (
             <div className="flex justify-evenly pl-4">
               <input
@@ -28,7 +28,7 @@ function Header({ path }) {
                 <SearchIcon className="bg-blue-500 px-2 py-2 outline-none rounded border-hidden" />
               </div>
             </div>
-          )}
+          )} */}
         </div>
         <div className="flex">
           <Link to="/allJobs" className="p-3">
@@ -46,7 +46,7 @@ function Header({ path }) {
           <a href="#" className="p-3 border-solid border-2 rounded">
             EMPLOYERS
           </a>
-          {(window.location.pathname === "/dashboard"||window.location.pathname === "/profile") ? (
+          {/* {(window.location.pathname === "/dashboard"||window.location.pathname === "/profile") ? ( */}
           
 
             <div className="p-3 ">
@@ -84,15 +84,15 @@ function Header({ path }) {
                 </ul>
               </div>
             </div>
-          ) : (
-            <Link to="/SignUp" className="p-3">
-              SIGN UP
-            </Link>
-          )}
+        {/* //   ) : (
+        //     <Link to="/SignUp" className="p-3">
+        //       SIGN UP
+        //     </Link>
+          )} */}
         </div>
       </div>
     </>
   );
 }
 
-export default Header;
+export default Header1;

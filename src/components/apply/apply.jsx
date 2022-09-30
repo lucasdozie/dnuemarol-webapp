@@ -1,10 +1,12 @@
 // import Button from "../others/btn";
+import Header from "../landingPage/header";
 import BioForm from "./applyform/bioForm";
 
 
 function ApplyForm() {
   return (
     <>
+    <Header/>
       <div className=" text-blackTint py-32 bg-blueTint bg-opacity-10 ">
         <div className="rounded mx-[300px] bg-blues-pattern bg-opacity-20">
           <div className="px-6 py-5">

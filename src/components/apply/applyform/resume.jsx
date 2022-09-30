@@ -9,6 +9,7 @@ import Button from "../../others/btn";
 // import { useEffect } from "react";
 // import { addResume } from "../../redux/feautures/bioform";
 import axios from "axios";
+import Header from "../../landingPage/header";
 
 function Resform() {
   const [resumeData, setResumeData] = useState({
@@ -50,6 +51,7 @@ function Resform() {
 
   return (
     <>
+    <Header/>
       <div className="text-blackTint py-32 bg-blueTint bg-opacity-10 ">
         <div className="rounded  mx-[300px] py-10 bg-blues-pattern bg-opacity-20">
           <div className="px-3 py-2">

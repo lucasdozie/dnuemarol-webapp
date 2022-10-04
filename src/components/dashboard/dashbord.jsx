@@ -10,7 +10,7 @@ import Resource from "./rescource";
 
 function Dashboard() {
   return (
-    <div className="bg-blueTint bg-opacity-10 text-blackTint px-20 py-10 flex gap-20">
+    <div className="bg-blueTint bg-opacity-10 text-blackTint px-10 py-10 flex gap-20">
       <div className="py-3">
         <Leftside/>
       </div>

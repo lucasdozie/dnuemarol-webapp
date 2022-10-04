@@ -13,10 +13,10 @@ function Leftside() {
     // { text: "", id: 8 },
   ];
   const [open, setOpen] = useState(true);
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(true);
   return (
     <div className="">
-      <div className={`${isNavOpen&&"slideRight"}`}>
+      <div className={`${isNavOpen && "slideRight"}`}>
         <div>
           <div
             className="HAMBURGER-ICON space-y-2 relative"

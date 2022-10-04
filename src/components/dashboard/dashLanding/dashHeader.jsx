@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Ham from "./ham";
+
 import { FaUserAlt } from "react-icons/fa";
 
 function DashHeader() {

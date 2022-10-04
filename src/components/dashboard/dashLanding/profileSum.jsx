@@ -1,6 +1,6 @@
 import React from "react";
 import { FaUserAlt } from "react-icons/fa";
-import Button from "../../others/btn";
+
 import { HiOutlineLocationMarker } from "react-icons/hi";
 
 function ProfileSum() {

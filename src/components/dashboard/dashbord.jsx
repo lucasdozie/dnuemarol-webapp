@@ -1,25 +1,33 @@
 import React from "react";
 import Filters from "../job/Alljob/filters";
 import JobList from "../job/Alljob/jobList";
-import Header from "../landingPage/header";
-import Ham from "./ham";
+import DashHeader from "./dashLanding/dashHeader";
+import Ham from "./dashLanding/ham";
+import Leftside from "./dashLanding/leftside";
+import ProfileSum from "./dashLanding/profileSum";
+import Try from "./dashLanding/try";
 import Resource from "./rescource";
 
 function Dashboard() {
   return (
-    <div className="bg-blueTint bg-opacity-10 text-blackTint">
-      <Header />
-      <div className="px-10 flex py-10">
-        <Ham
-         ui="User Information"
-         experience="Experience:25 years"
-         location="Location: Akwa-Ikom"
-         email="xyz@gmail.com"/>
-        <Filters />
+    <div className="bg-blueTint bg-opacity-10 text-blackTint px-10 py-10 flex gap-20">
+      <div className="py-3">
+        <Leftside/>
       </div>
-      <div className="px-20 flex gap-10 justify-center">
-        <div className="px-10"><JobList /></div>
-        <Resource/>
+      <div>
+        <DashHeader />
+        <div className="px-80 py-5">
+          <Filters />
+        </div>
+        <div className="py-20">
+          <ProfileSum />
+        </div>
+        <div className="">
+          <div className="px-10">
+            <h1 className="font-bold text-xl px-4">Jobs you may like</h1>
+            <JobList />
+          </div>
+        </div>
       </div>
     </div>
   );

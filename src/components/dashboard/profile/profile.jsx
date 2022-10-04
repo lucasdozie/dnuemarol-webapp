@@ -1,7 +1,7 @@
 import React from 'react'
 import Filters from '../../job/Alljob/filters'
 import Header from '../../landingPage/header'
-import Ham from '../ham'
+import Ham from '../dashLanding/ham'
 import ProfilePer from './profile_percentage'
 import ProfileUpdate from './profile_update'
 

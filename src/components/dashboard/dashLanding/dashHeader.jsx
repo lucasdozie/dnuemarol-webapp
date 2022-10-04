@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Ham from "./ham";
+
 import { FaUserAlt } from "react-icons/fa";
 
 function DashHeader() {
   return (
-    <div className="flex gap-[1000px]">
-      <div className="flex gap-20">
+    <div className="flex justify-between ">
+      <div className="">
         <div className="font-semibold text-4xl pt-1">
           <h1>Dashboard</h1>
         </div>

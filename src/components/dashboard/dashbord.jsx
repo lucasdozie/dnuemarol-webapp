@@ -8,11 +8,11 @@ import ProfileSum from "./dashLanding/profileSum";
 
 function Dashboard() {
   return (
-    <div className="bg-blueTint bg-opacity-10 text-blackTint px-10 py-10 flex gap-20">
+    <div className="bg-blueTint bg-opacity-10 text-blackTint px-10 py-10 flex">
       <div className="py-3">
         <Leftside />
       </div>
-      <div>
+      <div className="flex-1 pl-10">
         <DashHeader />
         <div className="px-80 py-5">
           <Filters />

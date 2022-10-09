@@ -3,7 +3,7 @@ import Button from "./btn";
 function LastSignup(){
     return(
         <>
-        <div className="text-center py-20">
+        <div className="text-center py-20 text-blackTint">
             <div className="">
                 <div className="pl-[500px] "><img className="w-96 h-96" src={pic} alt=""/></div>
                 <p className="font-semibold text-lg pb-5">Ready for the next step?</p>

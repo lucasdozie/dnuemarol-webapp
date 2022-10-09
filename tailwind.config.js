@@ -29,7 +29,10 @@ module.exports = {
       fontFamily: {
         sans: ['Barlow', ...defaultTheme.fontFamily.sans],
      },
-    },
+     animation: {
+      slideRight:"slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",},
+  },
+  
   },
   plugins: [],
 }

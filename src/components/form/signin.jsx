@@ -1,3 +1,4 @@
+import Header from "../landingPage/header";
 import Button from "../others/btn";
 import LogInfo from "./signin/formin";
 import Writeup from "./signup/writeup";
@@ -6,6 +7,7 @@ import Writeup from "./signup/writeup";
 function SignIn() {
   return (
     <>
+    <Header/>
       <div className=" text-blackTint py-32 bg-blues-pattern ">
         <div className="flex justify-center rounded mx-[300px]">
         <div className=" py-44 rounded-lg text-center">

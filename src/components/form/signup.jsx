@@ -1,13 +1,13 @@
 // import Button from "../others/btn";
+// import Header from "../landingPage/header";
+import Header from "../landingPage/header";
 import Info from "./signup/info";
 import Writeup from "./signup/writeup";
-
-
-
 
 function SignUp() {
   return (
     <>
+      <Header />
       <div className="  text-center text-blackTint py-32 bg-blues-pattern ">
         <div className="flex justify-center rounded mx-[250px]">
           <div className="py-44 rounded-lg ">
@@ -21,7 +21,9 @@ function SignUp() {
           <div>
             <div className="py-10">
               <p className="font-extrabold text-3xl"> Sign Up</p>
-              <p className="font-semibold text-xl">Its free and only takes a minute</p>
+              <p className="font-semibold text-xl">
+                Its free and only takes a minute
+              </p>
             </div>
 
             <div>
@@ -29,16 +31,15 @@ function SignUp() {
             </div>
 
             <p className="text-sm text-center mt-6">
-              By signing up, you agree to our 
+              By signing up, you agree to our
               <a href="#" className="text-blueTint hover:underline">
-                 <span className="pl-1">Terms</span>
+                <span className="pl-1">Terms</span>
               </a>
               <span className="pl-1">and</span>
               <a href="#" className="text-blueTint hover:underline">
-                 <span className="pl-1">Privacy Policy </span>
+                <span className="pl-1">Privacy Policy </span>
               </a>
             </p>
-
           </div>
         </div>
       </div>

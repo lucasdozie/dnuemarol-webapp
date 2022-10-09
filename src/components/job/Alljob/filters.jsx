@@ -4,7 +4,7 @@ function Filters() {
       <div className="item-center mb-10">
         <div className="flex mb-10">
           <div className="flex px-5">
-            <p className="px-3">Department</p>
+            <p className="px-3 py-2">Department</p>
             <select className="px-3">
               <option val="">Any Department</option>
               <option val="1">Backend</option>
@@ -16,7 +16,7 @@ function Filters() {
             </select>
           </div>
           <div className="flex px-5">
-            <p className="px-3">Location</p>
+            <p className="px-3 py-2">Location</p>
             <select className="px-3">
               <option val="">Location</option>
               <option val="1">Nigeria</option>

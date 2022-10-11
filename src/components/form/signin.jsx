@@ -28,13 +28,7 @@ function SignIn() {
               <LogInfo/>
             </div>
           </div>
-          <div className="text-center mt-6 md:mt-12">
-              <Button
-                text="Sign in"
-                link="/alljobs"
-                className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300"
-              />
-            </div>
+          
         </div>
         </div>
       </div>

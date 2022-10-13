@@ -2,13 +2,11 @@ import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Button from "../../others/btn";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux"
-import { storeLogData } from "../../redux/feautures/login";
-import {getUserID} from "../../../services/userService"
-
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/thunksetup/authService/authSlice";
 
 function LogInfo() {
+  const dispatch = useDispatch();
   const [logInData, setLogInData] = useState({
     password: "",
     email: "",
@@ -19,20 +17,22 @@ function LogInfo() {
       [e.target.name]: e.target.value,
     });
   };
-  const handleClick = async () => {
-    const res = await axios.post(
-      `${process.env.REACT_APP_ENDPOINT}user/login/email`,
-      logInData,
-      {
-        headers: {
-          "content-type": "application/json",
-          "x-nuema-customerId": getUserID()
-        },
-      }
-    );
-    console.log(res.data);
+  const handleClick = () => {
+    // (async)={
+    // const res = await axios.post(
+    //   `${process.env.REACT_APP_ENDPOINT}user/login/email`,
+    //   logInData,
+    //   {
+    //     headers: {
+    //       "content-type": "application/json",
+    //       "x-nuema-customerId": getUserID()
+    //     },
+    //   }
+    // );
+    // console.log(res.data);
+    dispatch(login(logInData)); // this dispatch the func login authslice taking logInData
   };
-  const dispatch = useDispatch();
+
   return (
     <>
       <div div className=" mt-6 md:mt-12">

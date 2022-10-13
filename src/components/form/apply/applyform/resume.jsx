@@ -4,12 +4,12 @@ import { FaUniversity, FaRegMoneyBillAlt } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import { MdClass, MdWork } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
-import Button from "../../others/btn";
+import Button from "../../../others/btn";
 // import { useDispatch, useSelector } from "react-redux";
 // import { useEffect } from "react";
 // import { addResume } from "../../redux/feautures/bioform";
 import axios from "axios";
-import Header from "../../landingPage/header";
+import Header from "../../../landingPage/header";
 
 function Resform() {
   const [resumeData, setResumeData] = useState({

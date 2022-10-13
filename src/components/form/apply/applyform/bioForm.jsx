@@ -6,7 +6,7 @@ import {} from "react-icons/fa";
 // import { useDispatch, useSelector } from "react-redux";
 // import { useEffect } from "react";
 // import { addBioData } from "../../redux/feautures/bioform";
-import Button from "../../others/btn";
+import Button from "../../../others/btn";
 import axios from "axios";
 
 function BioForm() {
@@ -72,7 +72,7 @@ function BioForm() {
           </div>
           <div className="py-3">
             <div className="font-medium ">
-              <label>: </label>
+              <label>Email: </label>
             </div>
             <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300 ">
               <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
@@ -94,7 +94,7 @@ function BioForm() {
 
           <div className="py-3">
             <div className="font-medium ">
-              <label className="">Address</label>
+              <label className="">Address:</label>
             </div>
             <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
               <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
@@ -114,7 +114,7 @@ function BioForm() {
           </div>
           <div className="py-3">
             <div className="font-medium ">
-              <label className="">Mobile Phone</label>
+              <label className="">Mobile Phone:</label>
             </div>
             <div className="border-[0.5px] border-solid rounded flex items-center mb-4  hover:border-blue-300">
               <div className="w-10 h-10 flex justify-center items-center flex-shrink-0">
@@ -151,7 +151,7 @@ function BioForm() {
           </div>
           <div className="py-3">
             <div className="font-medium ">
-              <label> Are you Nigerian by Nationality</label>
+              <label> Are you Nigerian by Nationality?</label>
             </div>
             <div className="">
               <ul className="flex">
@@ -177,7 +177,7 @@ function BioForm() {
               </ul>
             </div>
           </div>
-          <div className="pl-[700px] py-10">
+          <div className="pl-[790px] py-10">
             <Button
               text="Next"
               className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded-full transition-colors duration-300"

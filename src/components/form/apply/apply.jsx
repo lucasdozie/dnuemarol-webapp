@@ -1,5 +1,5 @@
 // import Button from "../others/btn";
-import Header from "../landingPage/header";
+import Header from "../../landingPage/header";
 import BioForm from "./applyform/bioForm";
 
 

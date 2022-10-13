@@ -17,9 +17,9 @@ import Home from "./components/home";
 import AllJobs from "./components/landingPage/alljobs";
 import JobList from "./components/job/Alljob/jobList";
 import JobPage from "./components/job/jobPage/jobpage";
-import ResForm from "./components/apply/applyform/resume";
-import BioForm from "./components/apply/applyform/bioForm";
-import ApplyForm from "./components/apply/apply";
+import ResForm from "./components/form/apply/applyform/resume";
+import BioForm from "./components/form/apply/applyform/bioForm";
+import ApplyForm from "./components/form/apply/apply";
 import Dashboard from "./components/dashboard/dashbord";
 import Profile from "./components/dashboard/profile/profile";
 

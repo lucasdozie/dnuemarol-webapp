@@ -4,12 +4,12 @@ import { FaUniversity, FaRegMoneyBillAlt } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import { MdClass, MdWork } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
-import Button from "../../others/btn";
+import Button from "../../../others/btn";
 // import { useDispatch, useSelector } from "react-redux";
 // import { useEffect } from "react";
 // import { addResume } from "../../redux/feautures/bioform";
 import axios from "axios";
-import Header from "../../landingPage/header";
+import Header from "../../../landingPage/header";
 
 function Resform() {
   const [resumeData, setResumeData] = useState({
@@ -36,6 +36,10 @@ function Resform() {
       // setResumeData((prevState) => ({ ...prevState, skillsList: skillsArray }));
     }
   };
+  console.log({ skillsList });
+
+  const allData = { ...resumeData, skills: skillsList };
+  console.log({ allData });
 
   const handleChange = (e) => {
     setResumeData({
@@ -54,8 +58,8 @@ function Resform() {
   console.log(resumeData);
   const handleClick = async () => {
     const res = await axios.post(
-      `${process.env.REACT_APP_ENDPOINT}/mariam`,
-      resumeData,
+      `${process.env.REACT_APP_ENDPOINT}`,
+      allData,
       {
         headers: {
           "content-type": "application/json",
@@ -193,13 +197,28 @@ function Resform() {
                         onChange={handleChange}
                       />
                     </div>
-                   <div> <button className="bg-blueTint rounded-full px-3 py-2" onClick={handleSubmit}>Enter</button></div>
+                    <div>
+                      {" "}
+                      <button
+                        className="bg-blueTint rounded-full px-3 py-2"
+                        onClick={handleSubmit}
+                      >
+                        Enter
+                      </button>
+                    </div>
                   </div>
 
                   <div>
                     <ul className="flex gap-10  ">
                       {skillsList.map((skill) => {
-                        return <li className="bg-blueTint rounded-full px-3 py-2" key={skill}>{skill}</li>;
+                        return (
+                          <li
+                            className="bg-blueTint rounded-full px-3 py-2"
+                            key={skill}
+                          >
+                            {skill}
+                          </li>
+                        );
                       })}
                     </ul>
                   </div>

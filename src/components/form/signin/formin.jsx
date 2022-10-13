@@ -1,18 +1,38 @@
 import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import Button from "../../others/btn";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/thunksetup/authService/authSlice";
 
 function LogInfo() {
-  const [formData, setformData] = useState({
+  const dispatch = useDispatch();
+  const [logInData, setLogInData] = useState({
     password: "",
     email: "",
   });
   const handleChange = (e) => {
-    setformData({
-      ...formData,
+    setLogInData({
+      ...logInData,
       [e.target.name]: e.target.value,
     });
   };
+  const handleClick = () => {
+    // (async)={
+    // const res = await axios.post(
+    //   `${process.env.REACT_APP_ENDPOINT}user/login/email`,
+    //   logInData,
+    //   {
+    //     headers: {
+    //       "content-type": "application/json",
+    //       "x-nuema-customerId": getUserID()
+    //     },
+    //   }
+    // );
+    // console.log(res.data);
+    dispatch(login(logInData)); // this dispatch the func login authslice taking logInData
+  };
+
   return (
     <>
       <div div className=" mt-6 md:mt-12">
@@ -25,7 +45,7 @@ function LogInfo() {
               className="rounded-full bg-transparent outline-none border-hidden border-blue-300 border-2 leading-[45px] placeholder:text-lg  font-semibold"
               type="text"
               placeholder="Email Address"
-              value={formData.email}
+              value={logInData.email}
               name="email"
               size="30"
               onChange={handleChange}
@@ -42,13 +62,22 @@ function LogInfo() {
               className="rounded-full bg-transparent outline-none border-hidden border-blue-300 border-2 leading-[45px] placeholder:text-lg  font-semibold"
               type="password"
               placeholder="Password"
-              value={formData.password}
+              value={logInData.password}
               name="password"
               size="30"
               onChange={handleChange}
             />
           </div>
         </div>
+      </div>
+      <div className="text-center mt-6 md:mt-12">
+        <Button
+          text="Sign in"
+          link="/alljobs"
+          className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300"
+          // onClick={() => dispatch(storeLogData(logInData))}
+          onClick={handleClick}
+        />
       </div>
     </>
   );

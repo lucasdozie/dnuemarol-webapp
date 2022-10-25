@@ -1,5 +1,5 @@
 import React from "react";
-import Filters from "../job/Alljob/filters";
+// import Filters from "../job/Alljob/filters";
 import JobList from "../job/Alljob/jobList";
 import DashHeader from "./dashLanding/dashHeader";
 
@@ -14,9 +14,9 @@ function Dashboard() {
       </div>
       <div className="flex-1 pl-10">
         <DashHeader />
-        <div className="px-80 py-5">
+        {/* <div className="px-80 py-5">
           <Filters />
-        </div>
+        </div> */}
         <div className="py-20">
           <ProfileSum />
         </div>

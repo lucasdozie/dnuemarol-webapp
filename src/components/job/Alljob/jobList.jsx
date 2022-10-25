@@ -1,37 +1,54 @@
+import { useEffect, useState } from "react";
 import Button from "../../others/btn";
-
+import { BounceLoader } from "react-spinners";
 
 function JobList() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchJobs = () => {
+    console.log("axioscall");
+  };
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
   return (
     <>
-      <div className="flex justify-between gap-40 p-5 text-blackTint">
-        <div className="flex">
-          <div>
-            <img src="" />
+      {/* {isLoading ? (
+        <BounceLoader 
+        loading={isLoading}
+      />
+      ) : ( */}
+        <div className="flex justify-between gap-40 p-5 text-blackTint">
+          <div className="flex">
+            <div>
+              <img src="" />
+            </div>
+            <div>
+              <p>Development Manager (Remote)</p>
+              <p>At FRONTSTEPS-Denver,Co/Remote</p>
+              <p>Posted on Aug 19</p>
+            </div>
           </div>
-          <div>
-            <p>Development Manager (Remote)</p>
-            <p>At FRONTSTEPS-Denver,Co/Remote</p>
-            <p>Posted on Aug 19</p>
+          <div className="flex py-3">
+            <div>
+              <Button
+                text="APPLY"
+                className="p-2 bg-gray-300 font-bold text-center"
+                link="/Apply"
+              />
+            </div>
+            <div>
+              <Button
+                text="VIEW JOB"
+                className="py-3 px-5 rounded border-blue-700 text-blue-500"
+                link="/JobPage"
+              />
+            </div>
           </div>
         </div>
-        <div className="flex py-3">
-          <div>
-            <Button
-              text="APPLY"
-              className="p-2 bg-gray-300 font-bold text-center"
-              link="/Apply"
-            />
-          </div>
-          <div>
-            <Button
-              text="VIEW JOB"
-              className="py-3 px-5 rounded border-blue-700 text-blue-500"
-              link="/JobPage"
-            />
-          </div>
-        </div>
-      </div>
+      {/* )} */}
     </>
   );
 }

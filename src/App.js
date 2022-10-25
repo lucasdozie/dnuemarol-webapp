@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Coaching from "./components/landingPage/coaching";
-import Companies from "./components/landingPage/companies";
+// import Coaching from "./components/landingPage/coaching";
+// import Companies from "./components/landingPage/companies";
 
-import Advice from "./components/landingPage/advice";
+// import Advice from "./components/landingPage/advice";
 
 import Footer from "./components/landingPage/footer";
 
@@ -22,15 +22,16 @@ import BioForm from "./components/form/apply/applyform/bioForm";
 import ApplyForm from "./components/form/apply/apply";
 import Dashboard from "./components/dashboard/dashbord";
 import Profile from "./components/dashboard/profile/profile";
+import AllJobList from "./components/job/allJobList";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/companies" element={<Companies />} />
-        <Route path="/advice" element={<Advice />} />
-        <Route path="/coaching" element={<Coaching />} />
+        {/* <Route path="/companies" element={<Companies />} /> */}
+        {/* <Route path="/advice" element={<Advice />} /> */}
+        {/* <Route path="/coaching" element={<Coaching />} /> */}
         <Route path="/alljobs" element={<AllJobs />} />
         <Route path="/jobpage" element={<JobPage />} />
         <Route path="/joblist" element={<JobList />} />
@@ -43,6 +44,7 @@ function App() {
         <Route path="/lastsignup" element={<LastSignup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/alljoblist" element={<AllJobList />} />
       </Routes>
       <Footer />
     </Router>

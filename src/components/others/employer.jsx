@@ -1,8 +1,10 @@
+import Header from "../landingPage/header";
 import pic from "../svgs/wave.svg";
 import Button from "./btn";
 function Employer() {
   return (
     <>
+    <Header/>
       <div className="flex flex-row-reverse justify-evenly py-40">
         <div className=" ">
           <img className="max-w-xl	max-h-xl" src={pic} alt="" />

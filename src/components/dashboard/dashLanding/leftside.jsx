@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 function Leftside() {
   const tiles = [
-    { text: "Overview", id: 1 },
-    { text: "Job Listing", id: 2 },
-    { text: "Saved Jobs", id: 3 },
-    { text: "Settings", id: 4 },
-    // { text: "", id: 5 },
-    // { text: "", id: 6 },
-    // { text: "", id: 7 },
-    // { text: "", id: 8 },
+    { text: "Overview", link:"./", id: 1 },
+    { text: "Job Listing", link:"/alljoblist", id: 2 },
+    { text: "Saved Jobs", link:"./", id: 3 },
+    { text: "Settings", link:"./", id: 4 },
+    // { text: "", link:"/", id.: 5 },
+    // { text: "", link:"/", id: 6 },
+    // { text: "", link:"/", id: 7 },
+    // { text: "", link:"/", id: 8 },
   ];
 
   const [isNavOpen, setIsNavOpen] = useState(true);
@@ -66,7 +66,7 @@ function Leftside() {
                   {tiles.map((tile) => (
                     <div className=" py-3 border-t-2" key={tile.id}>
                       <Link
-                        to="./activities.jsx"
+                        to={tile.link}
                         className="text-xl font-medium inline-block"
                       >
                         {tile.text}

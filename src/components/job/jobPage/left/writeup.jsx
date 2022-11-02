@@ -3,16 +3,34 @@ import CompanyCard from "./companyCard";
 import Perks from "./perks";
 import Search from "./search";
 import SkillRes from "./skillres";
+import { useEffect, useState } from "react";
+import { getRequest } from "../../../api/service";
+import { PacmanLoader } from "react-spinners";
 
 function Writeups() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [jobData, setJobData] = useState({})
+  const getJob = async (id) => {
+    const res = await getRequest(`recruit/jobListing/getOne?id=${id}`)
+    console.log("THIS IS THE RESPONSE DATA. THE ID IS " + id, res.data);
+    if(res.data) {
+      setIsLoading(false)
+    }
+    setJobData(res.data.data)
+  }
+  useEffect(() => {
+    console.log()
+    const id = window.location.pathname.split("/")[2]
+    getJob(id)
+  }, [])
   return (
     <>
-      <div className=" w-[650px] text-lg">
+      {isLoading ? <div className="p-20" ><PacmanLoader color="#3b82f6" size={20} /> </div>: <div className=" w-[650px] text-lg">
         <div className="">
           <div className="">
             <p className="text-sm text-blue-800 font-bold">Frontsteps</p>
-            <p className="font-bold text-3xl">Development Manager (Remote)</p>
-            <p className="text-sm">2 days ago•Denver, CO / Remote</p>
+            <p className="font-bold text-3xl">{jobData.title}</p>
+            <p className="text-sm">{jobData.created_at}{jobData.job_type}</p>
           </div>
           <CompanyCard />
           <div className="">
@@ -43,24 +61,11 @@ function Writeups() {
           <div className="">
             <p className="pt-5 font-bold pb-3">POSITION OVERVIEW</p>
             <p className="">
-              Our engineering team prioritizes creating excellent systems via
-              rapid iterations, collaboration, and peer review. We are looking
-              for a Development Manager who will own and drive the overall
-              delivery of all our products. This individual will actively mentor
-              and contribute to the personal development of their team. You get
-              just as excited seeing others grow and learn under your leadership
-              as you do by executing the work yourself. You seek to improve
-              standard practices and cultivate a culture of excellence. Most
-              importantly, you'll work with a diverse group of people and
-              collaborate to create the best solutions for FRONTSTEPS, Customer
-              Support department, and Customers.
+            {jobData.description}
             </p>
+            <p className="pt-5 font-bold pb-3">JOB RESPONSIBILITY</p>
             <p className="py-5">
-              As the Development Manager, you will focus on leading and
-              developing a highly skilled team of Senior Engineers delivering 6
-              different product lines. You will be responsible for managing the
-              Software Development Life Cycle for each product and the entire
-              team's performance.
+            {jobData.responsibility}
             </p>
             <p className="pb-5">
               This position may be based remotely in the U.S. All candidates
@@ -93,7 +98,7 @@ function Writeups() {
             <Search/>
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 }

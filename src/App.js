@@ -33,7 +33,7 @@ function App() {
         {/* <Route path="/advice" element={<Advice />} /> */}
         {/* <Route path="/coaching" element={<Coaching />} /> */}
         <Route path="/alljobs" element={<AllJobs />} />
-        <Route path="/jobpage" element={<JobPage />} />
+        <Route path="/jobpage/*" element={<JobPage />} />
         <Route path="/joblist" element={<JobList />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />

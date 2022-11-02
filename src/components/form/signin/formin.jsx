@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Button from "../../others/btn";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/thunksetup/authService/authSlice";
+import { PropagateLoader } from "react-spinners";
+import { useNavigate } from "react-router-dom";
 
 function LogInfo() {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const authState = useSelector((state) => state.auth);
+  const [isLoading, setIsLoading] = useState(false);
   const [logInData, setLogInData] = useState({
     password: "",
     email: "",
@@ -17,19 +22,13 @@ function LogInfo() {
       [e.target.name]: e.target.value,
     });
   };
+  useEffect(() => {
+    setIsLoading(authState.isLoading);
+    if(authState.user.status === "success") {
+      navigate("/alljobs")
+    }
+  }, [authState]);
   const handleClick = () => {
-    // (async)={
-    // const res = await axios.post(
-    //   `${process.env.REACT_APP_ENDPOINT}user/login/email`,
-    //   logInData,
-    //   {
-    //     headers: {
-    //       "content-type": "application/json",
-    //       "x-nuema-customerId": getUserID()
-    //     },
-    //   }
-    // );
-    // console.log(res.data);
     dispatch(login(logInData)); // this dispatch the func login authslice taking logInData
   };
 
@@ -70,10 +69,12 @@ function LogInfo() {
           </div>
         </div>
       </div>
+  
       <div className="text-center mt-6 md:mt-12">
+      {isLoading && <div className="p-10"><PropagateLoader color="#3b82f6" size={10} /></div>}
         <Button
           text="Sign in"
-          link="/alljobs"
+          link=""
           className="bg-blueTint hover:bg-blue-500 text-white text-xl py-2 px-4 md:px-6 rounded transition-colors duration-300"
           // onClick={() => dispatch(storeLogData(logInData))}
           onClick={handleClick}

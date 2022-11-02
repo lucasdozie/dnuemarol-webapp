@@ -32,6 +32,7 @@ export const register = createAsyncThunk(
 
 // Login user
 export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
+  console.log("Logging in")
   try {
     return await authService.login(user)
   } catch (error) {
@@ -75,6 +76,7 @@ export const authSlice = createSlice({
         state.user = null
       })
       .addCase(login.pending, (state) => {
+        console.log("This guy just fulfilled")
         state.isLoading = true
       })
       .addCase(login.fulfilled, (state, action) => {

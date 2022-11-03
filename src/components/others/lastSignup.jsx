@@ -1,8 +1,10 @@
+import Header from "../landingPage/header";
 import pic from "../svgs/wave2.svg"
 import Button from "./btn";
 function LastSignup(){
     return(
         <>
+        <Header/>
         <div className="text-center py-20 text-blackTint">
             <div className="">
                 <div className="pl-[500px] "><img className="w-96 h-96" src={pic} alt=""/></div>
